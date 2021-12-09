@@ -1,0 +1,2252 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_696713c2d3df40c2bfcc420fd84a9313 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@master/folium/templates/leaflet_heat.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_696713c2d3df40c2bfcc420fd84a9313" ></div>
+        
+</body>
+<script>    
+    
+            var map_696713c2d3df40c2bfcc420fd84a9313 = L.map(
+                "map_696713c2d3df40c2bfcc420fd84a9313",
+                {
+                    center: [37.473552, 127.03025],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                    zoomStrat: 15,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_6595784c05e44c4fadd69a9d1cbf67bd = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_696713c2d3df40c2bfcc420fd84a9313);
+        
+    
+            var heat_map_05ff9c2cbcb140d29e8c76b4f58b8d66 = L.heatLayer(
+                [[37.47587683, 126.9919958], [37.50270436, 127.0165117], [37.48429243, 127.0049025], [37.47975498, 127.0039164], [37.4730498, 127.0369771], [37.45571764, 127.0688536], [37.50643547, 127.0068357], [37.49532066, 127.0069071], [37.49532066, 127.0069071], [37.49827564, 127.0111232], [37.49827564, 127.0111232], [37.49827564, 127.0111232], [37.49364107, 127.008671], [37.48177205, 126.9827874], [37.48124518, 127.0361887], [37.47655368, 126.9847738], [37.49574242, 127.0051611], [37.4796841, 127.0241404], [37.49949788, 127.0033339], [37.48119434, 127.0234353], [37.494153, 127.0061697], [37.48377303, 127.0311879], [37.4721613, 126.997115], [37.49240869, 127.005274], [37.45760689, 127.0175687], [37.5099993, 127.018457], [37.45401313, 127.0546702], [37.51633536, 127.0113521], [37.44750663, 127.0571653], [37.48616287, 127.0059746], [37.47741495, 126.9840592], [37.47990985, 127.006372], [37.45760689, 127.0175687], [37.4620461, 127.0232666], [37.50119667, 127.0236225], [37.48398966, 126.9945095], [37.47924022, 127.0396699], [37.49588883, 127.0185954], [37.51007917, 127.00618], [37.48923252, 126.9836134], [37.478431, 127.0018406], [37.48744005, 127.0238172], [37.48822983, 127.0212213], [37.45194202, 127.0663637], [37.49185711, 126.9917906], [37.45420084, 127.0540193], [37.4806082, 126.9845967], [37.46346902, 127.0704296], [37.48494463, 126.9926687], [37.50071216, 126.9912377], [37.51633536, 127.0113521], [37.4620461, 127.0232666], [37.48952514, 126.9897419], [37.51530118, 127.0093793], [37.48470612, 126.9856134], [37.48078077, 126.9855644], [37.4994866, 127.0110058], [37.5090446, 127.0095233], [37.48447298, 127.0405365], [37.48760095, 126.9956128], [37.46986315, 127.0238659], [37.47500718, 126.9821559], [37.49575211, 127.0170529], [37.48655701, 127.0240612], [37.47469393, 127.044167], [37.48730771, 127.0181139], [37.49255825, 127.0213365], [37.51375066, 127.0165956], [37.51633536, 127.0113521], [37.5090446, 127.0095233], [37.49422089, 126.9867424], [37.484199, 127.0284609], [37.47679563, 126.989097], [37.47330798, 127.0396306], [37.48304448, 127.0415119], [37.48389595, 126.9942879], [37.47843957, 126.9999955], [37.46719351, 127.0206364], [37.49530893, 126.9837025], [37.46565291, 127.0271833], [37.48193897, 127.0052868], [37.49162785, 127.0242301], [37.47184479, 127.0265887], [37.4884361, 126.9838805], [37.49095958, 126.9901895], [37.49080064, 126.9865214], [37.5090446, 127.0095233], [37.46330065, 127.021463], [37.45611532, 127.0137843], [37.46911829, 127.0446746], [37.48452846, 127.0361631], [37.47169072, 127.0468783], [37.46346902, 127.0704296], [37.50626622, 126.996123], [37.4823994, 126.9845737], [37.5013463, 127.0107482], [37.48642194, 127.0314197], [37.48525447, 127.0305146], [37.50686455, 127.0008912], [37.4532452, 127.062477], [37.49742766, 127.0191522], [37.48345995, 127.0031161], [37.45526877, 127.0591784], [37.48903334, 127.0222483], [37.48330377, 127.0385385], [37.47467696, 127.0002351], [37.45611532, 127.0137843], [37.49174789, 127.0180381], [37.48383096, 126.9923704], [37.49072529, 126.989882], [37.48903334, 127.0222483], [37.45526877, 127.0591784], [37.47649337, 127.0024646], [37.46565291, 127.0271833], [37.48869834, 127.0213255], [37.51978768, 127.0143345], [37.48923252, 126.9836134], [37.47233011, 127.0430034], [37.46233242, 127.0521308], [37.49113954, 126.9875933], [37.49390576, 127.0234303], [37.50042675, 127.0154753], [37.5050048, 126.9956797], [37.47863779, 127.0007507], [37.46178626, 127.024962], [37.46470939, 127.0237693], [37.45652907, 127.0189383], [37.47229591, 127.023722], [37.50077618, 127.0167058], [37.47920002, 127.0004929], [37.47478793, 127.032084], [37.44779467, 127.0577441], [37.5152074, 127.0102706], [37.45389784, 127.0618853], [37.47112511, 127.0491534], [37.48642959, 127.0055766], [37.49588883, 127.0185954], [37.5049543, 126.9946301], [37.50785869, 127.0115816], [37.50248537, 126.9917397], [37.48676419, 126.9871372], [37.48067762, 126.9961062], [37.48906371, 126.9885796], [37.49640526, 126.9901572], [37.45609338, 127.0162166], [37.49236352, 127.0219462], [37.5104571, 127.0125049], [37.48362486, 127.0326848], [37.48900635, 126.9922432]],
+                {"blur": 25, "color": "Red", "maxZoom": 18, "maxZoon": 4, "minOpacity": 0.1, "radius": 20}
+            ).addTo(map_696713c2d3df40c2bfcc420fd84a9313);
+        
+    
+            var marker_cluster_d96b626185e445279d68c3fbd9149733 = L.markerClusterGroup(
+                {}
+            );
+            map_696713c2d3df40c2bfcc420fd84a9313.addLayer(marker_cluster_d96b626185e445279d68c3fbd9149733);
+        
+    
+            var marker_adbe3d51c5a54878a53b11d78ab27488 = L.marker(
+                [37.4759427, 126.9820712],
+                {}
+            ).addTo(marker_cluster_d96b626185e445279d68c3fbd9149733);
+        
+    
+        var popup_56c3260243f448c1b2ad6e5414338622 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9243708a0af94e90bfc79888222b3940 = $(`<div id="html_9243708a0af94e90bfc79888222b3940" style="width: 100.0%; height: 100.0%;">개방형흡연부스</div>`)[0];
+            popup_56c3260243f448c1b2ad6e5414338622.setContent(html_9243708a0af94e90bfc79888222b3940);
+        
+
+        marker_adbe3d51c5a54878a53b11d78ab27488.bindPopup(popup_56c3260243f448c1b2ad6e5414338622)
+        ;
+
+        
+    
+    
+            var marker_a8aecd3a9ee44139bdeef2a8fc779c15 = L.marker(
+                [37.4972107, 127.0273739],
+                {}
+            ).addTo(marker_cluster_d96b626185e445279d68c3fbd9149733);
+        
+    
+        var popup_2a6ca92a60db42508b2c3e497efff33b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_49c02729f3a6444ea0c6f2c13b0df2d6 = $(`<div id="html_49c02729f3a6444ea0c6f2c13b0df2d6" style="width: 100.0%; height: 100.0%;">개방형흡연부스</div>`)[0];
+            popup_2a6ca92a60db42508b2c3e497efff33b.setContent(html_49c02729f3a6444ea0c6f2c13b0df2d6);
+        
+
+        marker_a8aecd3a9ee44139bdeef2a8fc779c15.bindPopup(popup_2a6ca92a60db42508b2c3e497efff33b)
+        ;
+
+        
+    
+    
+            var marker_e701abdc10784c20803e762f046f3b0b = L.marker(
+                [37.482139, 126.9968963],
+                {}
+            ).addTo(marker_cluster_d96b626185e445279d68c3fbd9149733);
+        
+    
+        var popup_7ac834755b9c434b964a2a29e7b2916e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_374247050dfe4cf0a05ede390a5bc8f2 = $(`<div id="html_374247050dfe4cf0a05ede390a5bc8f2" style="width: 100.0%; height: 100.0%;">개방형흡연부스</div>`)[0];
+            popup_7ac834755b9c434b964a2a29e7b2916e.setContent(html_374247050dfe4cf0a05ede390a5bc8f2);
+        
+
+        marker_e701abdc10784c20803e762f046f3b0b.bindPopup(popup_7ac834755b9c434b964a2a29e7b2916e)
+        ;
+
+        
+    
+    
+            var marker_2c78ee9b2aff4619ab002dac4b0010c0 = L.marker(
+                [37.4776904, 126.9829746],
+                {}
+            ).addTo(marker_cluster_d96b626185e445279d68c3fbd9149733);
+        
+    
+        var popup_4b81d827b1da45b38e4d60b510ee0e56 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7b204a36f09a46ad810546b173083089 = $(`<div id="html_7b204a36f09a46ad810546b173083089" style="width: 100.0%; height: 100.0%;">개방형흡연부스</div>`)[0];
+            popup_4b81d827b1da45b38e4d60b510ee0e56.setContent(html_7b204a36f09a46ad810546b173083089);
+        
+
+        marker_2c78ee9b2aff4619ab002dac4b0010c0.bindPopup(popup_4b81d827b1da45b38e4d60b510ee0e56)
+        ;
+
+        
+    
+    
+            var marker_04d147a5f9314633b1d66e0ed508eb89 = L.marker(
+                [37.4955152, 127.027742],
+                {}
+            ).addTo(marker_cluster_d96b626185e445279d68c3fbd9149733);
+        
+    
+        var popup_a0d6e5ab945d4e31ac1d6174cd929c04 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d523ee26d32c4a95b197e3970a2c6167 = $(`<div id="html_d523ee26d32c4a95b197e3970a2c6167" style="width: 100.0%; height: 100.0%;">개방형흡연부스</div>`)[0];
+            popup_a0d6e5ab945d4e31ac1d6174cd929c04.setContent(html_d523ee26d32c4a95b197e3970a2c6167);
+        
+
+        marker_04d147a5f9314633b1d66e0ed508eb89.bindPopup(popup_a0d6e5ab945d4e31ac1d6174cd929c04)
+        ;
+
+        
+    
+    
+            var marker_c94d4f5893004479b3b3e16522262dd9 = L.marker(
+                [37.4939873, 127.0282119],
+                {}
+            ).addTo(marker_cluster_d96b626185e445279d68c3fbd9149733);
+        
+    
+        var popup_fba622a9446f43cfb1598e9404d77a9f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ea64e1fcf6b5478494615b47d2a68c61 = $(`<div id="html_ea64e1fcf6b5478494615b47d2a68c61" style="width: 100.0%; height: 100.0%;">개방형흡연부스</div>`)[0];
+            popup_fba622a9446f43cfb1598e9404d77a9f.setContent(html_ea64e1fcf6b5478494615b47d2a68c61);
+        
+
+        marker_c94d4f5893004479b3b3e16522262dd9.bindPopup(popup_fba622a9446f43cfb1598e9404d77a9f)
+        ;
+
+        
+    
+    
+            var marker_f18d34244b6a4737ac7ce7bd755ab0c0 = L.marker(
+                [37.4590038, 127.0405502],
+                {}
+            ).addTo(marker_cluster_d96b626185e445279d68c3fbd9149733);
+        
+    
+        var popup_f5c38fdb522c40929de7516282115b53 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7cc923a0511c4d80a9c2ea48993089ae = $(`<div id="html_7cc923a0511c4d80a9c2ea48993089ae" style="width: 100.0%; height: 100.0%;">개방형흡연부스</div>`)[0];
+            popup_f5c38fdb522c40929de7516282115b53.setContent(html_7cc923a0511c4d80a9c2ea48993089ae);
+        
+
+        marker_f18d34244b6a4737ac7ce7bd755ab0c0.bindPopup(popup_f5c38fdb522c40929de7516282115b53)
+        ;
+
+        
+    
+    
+            var marker_4a5486a850f84602b89e2ceca1a14d2b = L.marker(
+                [37.4839913, 126.9824358],
+                {}
+            ).addTo(marker_cluster_d96b626185e445279d68c3fbd9149733);
+        
+    
+        var popup_3a3974caec1f44919f42fcd1a4cb69d8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cd100fb65c6c4f2487f47196d829dc8b = $(`<div id="html_cd100fb65c6c4f2487f47196d829dc8b" style="width: 100.0%; height: 100.0%;">개방형흡연부스</div>`)[0];
+            popup_3a3974caec1f44919f42fcd1a4cb69d8.setContent(html_cd100fb65c6c4f2487f47196d829dc8b);
+        
+
+        marker_4a5486a850f84602b89e2ceca1a14d2b.bindPopup(popup_3a3974caec1f44919f42fcd1a4cb69d8)
+        ;
+
+        
+    
+    
+            var marker_1f11a61284be4846a94d32d70a4a7283 = L.marker(
+                [37.4814747, 126.9830646],
+                {}
+            ).addTo(marker_cluster_d96b626185e445279d68c3fbd9149733);
+        
+    
+        var popup_0278e5f3eb4f400f8673ad9a7f7bab9d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_067e74f4b9ef4303815e42a52faa531b = $(`<div id="html_067e74f4b9ef4303815e42a52faa531b" style="width: 100.0%; height: 100.0%;">개방형흡연부스</div>`)[0];
+            popup_0278e5f3eb4f400f8673ad9a7f7bab9d.setContent(html_067e74f4b9ef4303815e42a52faa531b);
+        
+
+        marker_1f11a61284be4846a94d32d70a4a7283.bindPopup(popup_0278e5f3eb4f400f8673ad9a7f7bab9d)
+        ;
+
+        
+    
+    
+            var marker_c54a5d7c4d5c4532b2cc4da451639412 = L.marker(
+                [37.4788648, 126.9829089],
+                {}
+            ).addTo(marker_cluster_d96b626185e445279d68c3fbd9149733);
+        
+    
+        var popup_ce8507fec1d848e09e4c5205883e5be1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d07e46375f1741a38bb5085aefd5b05b = $(`<div id="html_d07e46375f1741a38bb5085aefd5b05b" style="width: 100.0%; height: 100.0%;">개방형흡연부스</div>`)[0];
+            popup_ce8507fec1d848e09e4c5205883e5be1.setContent(html_d07e46375f1741a38bb5085aefd5b05b);
+        
+
+        marker_c54a5d7c4d5c4532b2cc4da451639412.bindPopup(popup_ce8507fec1d848e09e4c5205883e5be1)
+        ;
+
+        
+    
+    
+            var marker_461bb7ac9aa849db9fd3c5b4d579821a = L.marker(
+                [37.4848873, 127.0328967],
+                {}
+            ).addTo(marker_cluster_d96b626185e445279d68c3fbd9149733);
+        
+    
+        var popup_bfbcbe0f8c004210b3ffd0856c6ac6d0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8a23d3cdd58e428185e69bfe216962be = $(`<div id="html_8a23d3cdd58e428185e69bfe216962be" style="width: 100.0%; height: 100.0%;">라인형흡연구역</div>`)[0];
+            popup_bfbcbe0f8c004210b3ffd0856c6ac6d0.setContent(html_8a23d3cdd58e428185e69bfe216962be);
+        
+
+        marker_461bb7ac9aa849db9fd3c5b4d579821a.bindPopup(popup_bfbcbe0f8c004210b3ffd0856c6ac6d0)
+        ;
+
+        
+    
+    
+            var marker_417872deb2cd430da9a18e62ebf47529 = L.marker(
+                [37.4835322, 127.0342247],
+                {}
+            ).addTo(marker_cluster_d96b626185e445279d68c3fbd9149733);
+        
+    
+        var popup_e76642859ee34071a24189ebe36a36f3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_190da30c3dc844519011ff236d7761a4 = $(`<div id="html_190da30c3dc844519011ff236d7761a4" style="width: 100.0%; height: 100.0%;">라인형흡연구역</div>`)[0];
+            popup_e76642859ee34071a24189ebe36a36f3.setContent(html_190da30c3dc844519011ff236d7761a4);
+        
+
+        marker_417872deb2cd430da9a18e62ebf47529.bindPopup(popup_e76642859ee34071a24189ebe36a36f3)
+        ;
+
+        
+    
+    
+            var marker_287a5134bdda47e7aeb873c0cbb51363 = L.marker(
+                [37.4835872, 127.0326987],
+                {}
+            ).addTo(marker_cluster_d96b626185e445279d68c3fbd9149733);
+        
+    
+        var popup_655597c2ee9c494cb0c09f5dc477b2b9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2bfb0976c30646b98ca3387f66df4c2a = $(`<div id="html_2bfb0976c30646b98ca3387f66df4c2a" style="width: 100.0%; height: 100.0%;">폐쇄형흡연부스</div>`)[0];
+            popup_655597c2ee9c494cb0c09f5dc477b2b9.setContent(html_2bfb0976c30646b98ca3387f66df4c2a);
+        
+
+        marker_287a5134bdda47e7aeb873c0cbb51363.bindPopup(popup_655597c2ee9c494cb0c09f5dc477b2b9)
+        ;
+
+        
+    
+    
+            var marker_e37e507ff45e466b934cd32ca5ddb9d8 = L.marker(
+                [37.5037208, 127.0240967],
+                {}
+            ).addTo(marker_cluster_d96b626185e445279d68c3fbd9149733);
+        
+    
+        var popup_98d17cf3451d4b96ae6fce948042599f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3704a46d59af422b8626988a185cf3a0 = $(`<div id="html_3704a46d59af422b8626988a185cf3a0" style="width: 100.0%; height: 100.0%;">개방형흡연구역</div>`)[0];
+            popup_98d17cf3451d4b96ae6fce948042599f.setContent(html_3704a46d59af422b8626988a185cf3a0);
+        
+
+        marker_e37e507ff45e466b934cd32ca5ddb9d8.bindPopup(popup_98d17cf3451d4b96ae6fce948042599f)
+        ;
+
+        
+    
+    
+            var marker_94417476d5f04e0195f269a13047465b = L.marker(
+                [37.482717, 127.0349215],
+                {}
+            ).addTo(marker_cluster_d96b626185e445279d68c3fbd9149733);
+        
+    
+        var popup_e8799f2986694cc7bec2ffd9ca4075e3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_57e3d89c70784648af63e211ee245f63 = $(`<div id="html_57e3d89c70784648af63e211ee245f63" style="width: 100.0%; height: 100.0%;">개방형흡연구역</div>`)[0];
+            popup_e8799f2986694cc7bec2ffd9ca4075e3.setContent(html_57e3d89c70784648af63e211ee245f63);
+        
+
+        marker_94417476d5f04e0195f269a13047465b.bindPopup(popup_e8799f2986694cc7bec2ffd9ca4075e3)
+        ;
+
+        
+    
+    
+            var marker_39702bf8b6ed4267a866c04b1875486e = L.marker(
+                [37.4872446, 127.0327813],
+                {}
+            ).addTo(marker_cluster_d96b626185e445279d68c3fbd9149733);
+        
+    
+        var popup_02a223c05528413886af49d89c40d1dc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8109786135194d679a72d5b772a3c6d5 = $(`<div id="html_8109786135194d679a72d5b772a3c6d5" style="width: 100.0%; height: 100.0%;">부분개방형흡연실</div>`)[0];
+            popup_02a223c05528413886af49d89c40d1dc.setContent(html_8109786135194d679a72d5b772a3c6d5);
+        
+
+        marker_39702bf8b6ed4267a866c04b1875486e.bindPopup(popup_02a223c05528413886af49d89c40d1dc)
+        ;
+
+        
+    
+    
+            var marker_8f91b99b3a3e4230bb876d464baa5792 = L.marker(
+                [37.5041299, 127.0030692],
+                {}
+            ).addTo(marker_cluster_d96b626185e445279d68c3fbd9149733);
+        
+    
+        var popup_7c590c052de9410e8def594f0acea6ed = L.popup({"maxWidth": "100%"});
+
+        
+            var html_36912a6653cb4f0180f075f9a518dbb1 = $(`<div id="html_36912a6653cb4f0180f075f9a518dbb1" style="width: 100.0%; height: 100.0%;">부분개방형흡연부스</div>`)[0];
+            popup_7c590c052de9410e8def594f0acea6ed.setContent(html_36912a6653cb4f0180f075f9a518dbb1);
+        
+
+        marker_8f91b99b3a3e4230bb876d464baa5792.bindPopup(popup_7c590c052de9410e8def594f0acea6ed)
+        ;
+
+        
+    
+    
+            var marker_1b50691b0d5245eaa7ba84d030067ded = L.marker(
+                [37.5060582, 127.0033885],
+                {}
+            ).addTo(marker_cluster_d96b626185e445279d68c3fbd9149733);
+        
+    
+        var popup_5f2b244b2951421c95a1c9991cc6368e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0853aa9e314d42dbbe2b40684d8f7d9a = $(`<div id="html_0853aa9e314d42dbbe2b40684d8f7d9a" style="width: 100.0%; height: 100.0%;">부분개방형흡연부스</div>`)[0];
+            popup_5f2b244b2951421c95a1c9991cc6368e.setContent(html_0853aa9e314d42dbbe2b40684d8f7d9a);
+        
+
+        marker_1b50691b0d5245eaa7ba84d030067ded.bindPopup(popup_5f2b244b2951421c95a1c9991cc6368e)
+        ;
+
+        
+    
+    
+            var marker_220de25c8e82472a86814ff837c7a123 = L.marker(
+                [37.5041437, 126.9970518],
+                {}
+            ).addTo(marker_cluster_d96b626185e445279d68c3fbd9149733);
+        
+    
+        var popup_454c9018213941c9bee40c135c7c107e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fcd4e92cb258497fbbf92652bd10e752 = $(`<div id="html_fcd4e92cb258497fbbf92652bd10e752" style="width: 100.0%; height: 100.0%;">개방형흡연구역</div>`)[0];
+            popup_454c9018213941c9bee40c135c7c107e.setContent(html_fcd4e92cb258497fbbf92652bd10e752);
+        
+
+        marker_220de25c8e82472a86814ff837c7a123.bindPopup(popup_454c9018213941c9bee40c135c7c107e)
+        ;
+
+        
+    
+    
+            var marker_cbb7d52d8f284ca68a4705a582c7bc36 = L.marker(
+                [37.5047736, 127.0049178],
+                {}
+            ).addTo(marker_cluster_d96b626185e445279d68c3fbd9149733);
+        
+    
+        var popup_8c9a27bc27c74c99a8b4836732ea710e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c7266ef82dc54d3e9752faa360a4557a = $(`<div id="html_c7266ef82dc54d3e9752faa360a4557a" style="width: 100.0%; height: 100.0%;">부분개방형흡연구역</div>`)[0];
+            popup_8c9a27bc27c74c99a8b4836732ea710e.setContent(html_c7266ef82dc54d3e9752faa360a4557a);
+        
+
+        marker_cbb7d52d8f284ca68a4705a582c7bc36.bindPopup(popup_8c9a27bc27c74c99a8b4836732ea710e)
+        ;
+
+        
+    
+    
+            var marker_aceaa77b87994bd0b1453048dd821d33 = L.marker(
+                [37.4832626, 127.036199],
+                {}
+            ).addTo(marker_cluster_d96b626185e445279d68c3fbd9149733);
+        
+    
+        var popup_7bad52660dbc480c95dd2e382f4f9c23 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_99140ff2e5d54c8cbd488d4933637d51 = $(`<div id="html_99140ff2e5d54c8cbd488d4933637d51" style="width: 100.0%; height: 100.0%;">라인형흡연구역</div>`)[0];
+            popup_7bad52660dbc480c95dd2e382f4f9c23.setContent(html_99140ff2e5d54c8cbd488d4933637d51);
+        
+
+        marker_aceaa77b87994bd0b1453048dd821d33.bindPopup(popup_7bad52660dbc480c95dd2e382f4f9c23)
+        ;
+
+        
+    
+    
+            var marker_13433aad21554604944efcae7a46b628 = L.marker(
+                [37.4818374, 127.0376691],
+                {}
+            ).addTo(marker_cluster_d96b626185e445279d68c3fbd9149733);
+        
+    
+        var popup_5c2da23371b543829b360e9add507055 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_20d1ecd6f2954ddcb335ead54bce03c2 = $(`<div id="html_20d1ecd6f2954ddcb335ead54bce03c2" style="width: 100.0%; height: 100.0%;">라인형흡연구역</div>`)[0];
+            popup_5c2da23371b543829b360e9add507055.setContent(html_20d1ecd6f2954ddcb335ead54bce03c2);
+        
+
+        marker_13433aad21554604944efcae7a46b628.bindPopup(popup_5c2da23371b543829b360e9add507055)
+        ;
+
+        
+    
+    
+            var marker_e6aa5996278747b6942f55aaeea669a7 = L.marker(
+                [37.4778565, 126.9758417],
+                {}
+            ).addTo(marker_cluster_d96b626185e445279d68c3fbd9149733);
+        
+    
+        var popup_728c5f13148a4d258349154d6f958854 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5a32f7713d6c49a09b61280ffc34435e = $(`<div id="html_5a32f7713d6c49a09b61280ffc34435e" style="width: 100.0%; height: 100.0%;">라인형흡연구역</div>`)[0];
+            popup_728c5f13148a4d258349154d6f958854.setContent(html_5a32f7713d6c49a09b61280ffc34435e);
+        
+
+        marker_e6aa5996278747b6942f55aaeea669a7.bindPopup(popup_728c5f13148a4d258349154d6f958854)
+        ;
+
+        
+    
+    
+            var marker_40ad68595eb64ec588e754ffaab10420 = L.marker(
+                [37.4819647, 127.042353],
+                {}
+            ).addTo(marker_cluster_d96b626185e445279d68c3fbd9149733);
+        
+    
+        var popup_f08aa19766bf4c8aaf9656ce4fb8607d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_344494f4429b4d2e869ca0e744e8e516 = $(`<div id="html_344494f4429b4d2e869ca0e744e8e516" style="width: 100.0%; height: 100.0%;">라인형흡연구역</div>`)[0];
+            popup_f08aa19766bf4c8aaf9656ce4fb8607d.setContent(html_344494f4429b4d2e869ca0e744e8e516);
+        
+
+        marker_40ad68595eb64ec588e754ffaab10420.bindPopup(popup_f08aa19766bf4c8aaf9656ce4fb8607d)
+        ;
+
+        
+    
+    
+            var marker_f6b458ba00e44d3aa6f56cee396273a1 = L.marker(
+                [37.4802783, 127.0408436],
+                {}
+            ).addTo(marker_cluster_d96b626185e445279d68c3fbd9149733);
+        
+    
+        var popup_4e00cf41187d4192958686d615833a3e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d268205f290f4c5fabbf8814bf3fb65d = $(`<div id="html_d268205f290f4c5fabbf8814bf3fb65d" style="width: 100.0%; height: 100.0%;">라인형흡연구역</div>`)[0];
+            popup_4e00cf41187d4192958686d615833a3e.setContent(html_d268205f290f4c5fabbf8814bf3fb65d);
+        
+
+        marker_f6b458ba00e44d3aa6f56cee396273a1.bindPopup(popup_4e00cf41187d4192958686d615833a3e)
+        ;
+
+        
+    
+    
+            var marker_fcbe75e9e47e4badb72949bbcf6b1df0 = L.marker(
+                [37.4872446, 127.0327813],
+                {}
+            ).addTo(marker_cluster_d96b626185e445279d68c3fbd9149733);
+        
+    
+        var popup_2c7a8bd7340741d4b0ea9ba6e1272442 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cb6533d8e8a8451f9c478a036c3f33d5 = $(`<div id="html_cb6533d8e8a8451f9c478a036c3f33d5" style="width: 100.0%; height: 100.0%;">라인형흡연구역</div>`)[0];
+            popup_2c7a8bd7340741d4b0ea9ba6e1272442.setContent(html_cb6533d8e8a8451f9c478a036c3f33d5);
+        
+
+        marker_fcbe75e9e47e4badb72949bbcf6b1df0.bindPopup(popup_2c7a8bd7340741d4b0ea9ba6e1272442)
+        ;
+
+        
+    
+    
+            var marker_a3014e8714a84dbfb508b0e9732d5839 = L.marker(
+                [37.4769684, 127.039138],
+                {}
+            ).addTo(marker_cluster_d96b626185e445279d68c3fbd9149733);
+        
+    
+        var popup_285da089673f4bb0a8e2e0c0920249a7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2829315ee7f34e30a3f1a8e0fadaf242 = $(`<div id="html_2829315ee7f34e30a3f1a8e0fadaf242" style="width: 100.0%; height: 100.0%;">라인형흡연구역</div>`)[0];
+            popup_285da089673f4bb0a8e2e0c0920249a7.setContent(html_2829315ee7f34e30a3f1a8e0fadaf242);
+        
+
+        marker_a3014e8714a84dbfb508b0e9732d5839.bindPopup(popup_285da089673f4bb0a8e2e0c0920249a7)
+        ;
+
+        
+    
+    
+            var marker_71fec6bc8d684a0a99b741d9e50b9c17 = L.marker(
+                [37.4757664, 127.0391387],
+                {}
+            ).addTo(marker_cluster_d96b626185e445279d68c3fbd9149733);
+        
+    
+        var popup_9b2e1e85f6574f4cbc948c92f20a89f3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8fce81a0c3b94cbf873031aaa1db84c4 = $(`<div id="html_8fce81a0c3b94cbf873031aaa1db84c4" style="width: 100.0%; height: 100.0%;">라인형흡연구역</div>`)[0];
+            popup_9b2e1e85f6574f4cbc948c92f20a89f3.setContent(html_8fce81a0c3b94cbf873031aaa1db84c4);
+        
+
+        marker_71fec6bc8d684a0a99b741d9e50b9c17.bindPopup(popup_9b2e1e85f6574f4cbc948c92f20a89f3)
+        ;
+
+        
+    
+    
+            var marker_fa41222393594610a118289183add0a9 = L.marker(
+                [37.478246, 127.0380204],
+                {}
+            ).addTo(marker_cluster_d96b626185e445279d68c3fbd9149733);
+        
+    
+        var popup_c165e994877a463d9d4179b6b76e7c65 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1f9a432a7b994980b90f79d4853a6386 = $(`<div id="html_1f9a432a7b994980b90f79d4853a6386" style="width: 100.0%; height: 100.0%;">라인형흡연구역</div>`)[0];
+            popup_c165e994877a463d9d4179b6b76e7c65.setContent(html_1f9a432a7b994980b90f79d4853a6386);
+        
+
+        marker_fa41222393594610a118289183add0a9.bindPopup(popup_c165e994877a463d9d4179b6b76e7c65)
+        ;
+
+        
+    
+    
+            var marker_084595f307fc40eeab8ed38d559f6601 = L.marker(
+                [37.4768135, 127.0381496],
+                {}
+            ).addTo(marker_cluster_d96b626185e445279d68c3fbd9149733);
+        
+    
+        var popup_f27aab5269b6461baf15b4d4a307bf88 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_439e370b04cf45ff8be0c9fd2a6ec4c5 = $(`<div id="html_439e370b04cf45ff8be0c9fd2a6ec4c5" style="width: 100.0%; height: 100.0%;">라인형흡연구역</div>`)[0];
+            popup_f27aab5269b6461baf15b4d4a307bf88.setContent(html_439e370b04cf45ff8be0c9fd2a6ec4c5);
+        
+
+        marker_084595f307fc40eeab8ed38d559f6601.bindPopup(popup_f27aab5269b6461baf15b4d4a307bf88)
+        ;
+
+        
+    
+    
+            var marker_5dcd92770450401eb01dfc2e334f8be0 = L.marker(
+                [37.4754576, 127.0351845],
+                {}
+            ).addTo(marker_cluster_d96b626185e445279d68c3fbd9149733);
+        
+    
+        var popup_cc8b4762fd9245e486dabf7037fad355 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7f71f8196adb46ba8295cd41f6c6d0b4 = $(`<div id="html_7f71f8196adb46ba8295cd41f6c6d0b4" style="width: 100.0%; height: 100.0%;">라인형흡연구역</div>`)[0];
+            popup_cc8b4762fd9245e486dabf7037fad355.setContent(html_7f71f8196adb46ba8295cd41f6c6d0b4);
+        
+
+        marker_5dcd92770450401eb01dfc2e334f8be0.bindPopup(popup_cc8b4762fd9245e486dabf7037fad355)
+        ;
+
+        
+    
+    
+            var marker_2543f756180845728aea773fcf695cd0 = L.marker(
+                [37.4872446, 127.0327813],
+                {}
+            ).addTo(marker_cluster_d96b626185e445279d68c3fbd9149733);
+        
+    
+        var popup_905b5cc5225b45c78c607817f57e0474 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_492e72c7f3424ca38f2ef9f4de5033c6 = $(`<div id="html_492e72c7f3424ca38f2ef9f4de5033c6" style="width: 100.0%; height: 100.0%;">라인형흡연구역</div>`)[0];
+            popup_905b5cc5225b45c78c607817f57e0474.setContent(html_492e72c7f3424ca38f2ef9f4de5033c6);
+        
+
+        marker_2543f756180845728aea773fcf695cd0.bindPopup(popup_905b5cc5225b45c78c607817f57e0474)
+        ;
+
+        
+    
+    
+            var marker_5d1902f44f6140d7832657cf258a8245 = L.marker(
+                [37.482717, 127.0349215],
+                {}
+            ).addTo(marker_cluster_d96b626185e445279d68c3fbd9149733);
+        
+    
+        var popup_b9fee7c55cf94d0d90864203dbb21fcd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_99c67e3390c542e5a35a823e6c00eb95 = $(`<div id="html_99c67e3390c542e5a35a823e6c00eb95" style="width: 100.0%; height: 100.0%;">라인형흡연구역</div>`)[0];
+            popup_b9fee7c55cf94d0d90864203dbb21fcd.setContent(html_99c67e3390c542e5a35a823e6c00eb95);
+        
+
+        marker_5d1902f44f6140d7832657cf258a8245.bindPopup(popup_b9fee7c55cf94d0d90864203dbb21fcd)
+        ;
+
+        
+    
+    
+            var marker_20f4e71bffa24a6286921f23dd0f6d60 = L.marker(
+                [37.4835322, 127.0342247],
+                {}
+            ).addTo(marker_cluster_d96b626185e445279d68c3fbd9149733);
+        
+    
+        var popup_d6c7bf7a5b754aceb974f4c587211b07 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_54c431fe831a4f3d9b3dfa3fec5ff5cc = $(`<div id="html_54c431fe831a4f3d9b3dfa3fec5ff5cc" style="width: 100.0%; height: 100.0%;">라인형흡연구역</div>`)[0];
+            popup_d6c7bf7a5b754aceb974f4c587211b07.setContent(html_54c431fe831a4f3d9b3dfa3fec5ff5cc);
+        
+
+        marker_20f4e71bffa24a6286921f23dd0f6d60.bindPopup(popup_d6c7bf7a5b754aceb974f4c587211b07)
+        ;
+
+        
+    
+    
+            var marker_733324d468a2402a8a05b99feac0bcef = L.marker(
+                [37.4758553, 127.0350098],
+                {}
+            ).addTo(marker_cluster_d96b626185e445279d68c3fbd9149733);
+        
+    
+        var popup_2f7d5b7203aa4d40924ee1b5ac7d391c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_dbb9b56b52c14e2cb77c734c7d31060e = $(`<div id="html_dbb9b56b52c14e2cb77c734c7d31060e" style="width: 100.0%; height: 100.0%;">비대면흡연부스</div>`)[0];
+            popup_2f7d5b7203aa4d40924ee1b5ac7d391c.setContent(html_dbb9b56b52c14e2cb77c734c7d31060e);
+        
+
+        marker_733324d468a2402a8a05b99feac0bcef.bindPopup(popup_2f7d5b7203aa4d40924ee1b5ac7d391c)
+        ;
+
+        
+    
+    
+            var marker_eec6224844f74cfeb2d5840773e953e4 = L.marker(
+                [37.4772356, 127.0361045],
+                {}
+            ).addTo(marker_cluster_d96b626185e445279d68c3fbd9149733);
+        
+    
+        var popup_0931fc4f938c451aafdfc0d4fc88373a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cb833c50992a470f993b35ee6737b702 = $(`<div id="html_cb833c50992a470f993b35ee6737b702" style="width: 100.0%; height: 100.0%;">비대면흡연부스</div>`)[0];
+            popup_0931fc4f938c451aafdfc0d4fc88373a.setContent(html_cb833c50992a470f993b35ee6737b702);
+        
+
+        marker_eec6224844f74cfeb2d5840773e953e4.bindPopup(popup_0931fc4f938c451aafdfc0d4fc88373a)
+        ;
+
+        
+    
+    
+            var marker_1c4c0bd189cb4e0fa7d7db8673521adc = L.marker(
+                [37.4789077, 127.0379486],
+                {}
+            ).addTo(marker_cluster_d96b626185e445279d68c3fbd9149733);
+        
+    
+        var popup_73c8a0adc6104e628098695f7f452a66 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7a94870b18ba43c599d84c21d0ee48fe = $(`<div id="html_7a94870b18ba43c599d84c21d0ee48fe" style="width: 100.0%; height: 100.0%;">비대면흡연부스</div>`)[0];
+            popup_73c8a0adc6104e628098695f7f452a66.setContent(html_7a94870b18ba43c599d84c21d0ee48fe);
+        
+
+        marker_1c4c0bd189cb4e0fa7d7db8673521adc.bindPopup(popup_73c8a0adc6104e628098695f7f452a66)
+        ;
+
+        
+    
+    
+            var marker_5b900392c9d24ae8b85efc889954f86f = L.marker(
+                [37.476351, 127.0419973],
+                {}
+            ).addTo(marker_cluster_d96b626185e445279d68c3fbd9149733);
+        
+    
+        var popup_942a6612a5d048bc8b43b1340cb11ddc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d6a6b07bae9f4e268121b3280f21ade2 = $(`<div id="html_d6a6b07bae9f4e268121b3280f21ade2" style="width: 100.0%; height: 100.0%;">라인형흡연구역</div>`)[0];
+            popup_942a6612a5d048bc8b43b1340cb11ddc.setContent(html_d6a6b07bae9f4e268121b3280f21ade2);
+        
+
+        marker_5b900392c9d24ae8b85efc889954f86f.bindPopup(popup_942a6612a5d048bc8b43b1340cb11ddc)
+        ;
+
+        
+    
+    
+            var marker_36c3587ce20c4958ad62ed0778149497 = L.marker(
+                [37.4766141, 127.0441206],
+                {}
+            ).addTo(marker_cluster_d96b626185e445279d68c3fbd9149733);
+        
+    
+        var popup_0752432caff042e6adce9188a5249dec = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d19488e3c604458181d8c781740b2a0b = $(`<div id="html_d19488e3c604458181d8c781740b2a0b" style="width: 100.0%; height: 100.0%;">라인형흡연구역</div>`)[0];
+            popup_0752432caff042e6adce9188a5249dec.setContent(html_d19488e3c604458181d8c781740b2a0b);
+        
+
+        marker_36c3587ce20c4958ad62ed0778149497.bindPopup(popup_0752432caff042e6adce9188a5249dec)
+        ;
+
+        
+    
+    
+            var marker_b522cccb4b40493897fd0da71d9baea4 = L.marker(
+                [37.4809666, 127.0410301],
+                {}
+            ).addTo(marker_cluster_d96b626185e445279d68c3fbd9149733);
+        
+    
+        var popup_693fe979d6d94dfc9305f412a003a596 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cbdc57e3ecba4a07b76bc305901af85f = $(`<div id="html_cbdc57e3ecba4a07b76bc305901af85f" style="width: 100.0%; height: 100.0%;">비대면흡연부스</div>`)[0];
+            popup_693fe979d6d94dfc9305f412a003a596.setContent(html_cbdc57e3ecba4a07b76bc305901af85f);
+        
+
+        marker_b522cccb4b40493897fd0da71d9baea4.bindPopup(popup_693fe979d6d94dfc9305f412a003a596)
+        ;
+
+        
+    
+    
+            var marker_461cd025af8144a7ae7ca896527c4bc7 = L.marker(
+                [37.4714799, 127.0503767],
+                {}
+            ).addTo(marker_cluster_d96b626185e445279d68c3fbd9149733);
+        
+    
+        var popup_f573a22c8417471f87129119fef74f34 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_dc1f85086ad04870a849b7675b27e707 = $(`<div id="html_dc1f85086ad04870a849b7675b27e707" style="width: 100.0%; height: 100.0%;">라인형흡연구역</div>`)[0];
+            popup_f573a22c8417471f87129119fef74f34.setContent(html_dc1f85086ad04870a849b7675b27e707);
+        
+
+        marker_461cd025af8144a7ae7ca896527c4bc7.bindPopup(popup_f573a22c8417471f87129119fef74f34)
+        ;
+
+        
+    
+    
+            var marker_66c16ed612984aa4972bec0abb4ce45e = L.marker(
+                [37.4710986, 127.0478853],
+                {}
+            ).addTo(marker_cluster_d96b626185e445279d68c3fbd9149733);
+        
+    
+        var popup_1d1eb35e5771413cbff4e7d34226115d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d20b3e15aa9d49ebb2b16c28433bc91e = $(`<div id="html_d20b3e15aa9d49ebb2b16c28433bc91e" style="width: 100.0%; height: 100.0%;">라인형흡연구역</div>`)[0];
+            popup_1d1eb35e5771413cbff4e7d34226115d.setContent(html_d20b3e15aa9d49ebb2b16c28433bc91e);
+        
+
+        marker_66c16ed612984aa4972bec0abb4ce45e.bindPopup(popup_1d1eb35e5771413cbff4e7d34226115d)
+        ;
+
+        
+    
+    
+            var marker_d9ea57466e20490ea34d204d82c1c92f = L.marker(
+                [37.4696165, 127.0478012],
+                {}
+            ).addTo(marker_cluster_d96b626185e445279d68c3fbd9149733);
+        
+    
+        var popup_021c343e6088406c9d5532bc68d70127 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2917369665174ce9a13a858bd961c7ce = $(`<div id="html_2917369665174ce9a13a858bd961c7ce" style="width: 100.0%; height: 100.0%;">라인형흡연구역</div>`)[0];
+            popup_021c343e6088406c9d5532bc68d70127.setContent(html_2917369665174ce9a13a858bd961c7ce);
+        
+
+        marker_d9ea57466e20490ea34d204d82c1c92f.bindPopup(popup_021c343e6088406c9d5532bc68d70127)
+        ;
+
+        
+    
+    
+            var marker_5b3ad0e70608455b945687aeea0bcaa4 = L.marker(
+                [37.4700505, 127.0443014],
+                {}
+            ).addTo(marker_cluster_d96b626185e445279d68c3fbd9149733);
+        
+    
+        var popup_1e1e405be4bd43c59b2fbdc148e8682f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4d77c134f1cc44c68d4b6a876fdd7434 = $(`<div id="html_4d77c134f1cc44c68d4b6a876fdd7434" style="width: 100.0%; height: 100.0%;">라인형흡연구역</div>`)[0];
+            popup_1e1e405be4bd43c59b2fbdc148e8682f.setContent(html_4d77c134f1cc44c68d4b6a876fdd7434);
+        
+
+        marker_5b3ad0e70608455b945687aeea0bcaa4.bindPopup(popup_1e1e405be4bd43c59b2fbdc148e8682f)
+        ;
+
+        
+    
+    
+            var marker_bd897f20c39f409f88b8fba6dc248cc8 = L.marker(
+                [37.4675764, 127.04488],
+                {}
+            ).addTo(marker_cluster_d96b626185e445279d68c3fbd9149733);
+        
+    
+        var popup_c5ba2a8e4211493aa2fa919a7485c5f8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7a877829c1c44bb6913e4cdf89ba49f1 = $(`<div id="html_7a877829c1c44bb6913e4cdf89ba49f1" style="width: 100.0%; height: 100.0%;">라인형흡연구역</div>`)[0];
+            popup_c5ba2a8e4211493aa2fa919a7485c5f8.setContent(html_7a877829c1c44bb6913e4cdf89ba49f1);
+        
+
+        marker_bd897f20c39f409f88b8fba6dc248cc8.bindPopup(popup_c5ba2a8e4211493aa2fa919a7485c5f8)
+        ;
+
+        
+    
+    
+            var marker_2a3434586f574a889c53abcd798488b0 = L.marker(
+                [37.4668027, 127.0424684],
+                {}
+            ).addTo(marker_cluster_d96b626185e445279d68c3fbd9149733);
+        
+    
+        var popup_7f35800c123e4ef784260e0355f72cbd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3d5912dab19f42e3b1751b32321d8e26 = $(`<div id="html_3d5912dab19f42e3b1751b32321d8e26" style="width: 100.0%; height: 100.0%;">라인형흡연구역</div>`)[0];
+            popup_7f35800c123e4ef784260e0355f72cbd.setContent(html_3d5912dab19f42e3b1751b32321d8e26);
+        
+
+        marker_2a3434586f574a889c53abcd798488b0.bindPopup(popup_7f35800c123e4ef784260e0355f72cbd)
+        ;
+
+        
+    
+    
+            var marker_c5c90654e1554262bd909bcf4076541c = L.marker(
+                [37.4713061, 127.0478523],
+                {}
+            ).addTo(marker_cluster_d96b626185e445279d68c3fbd9149733);
+        
+    
+        var popup_e1fb11d59f3640e685d814d773bdc560 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cf53b7be1d974b3cb05cdf5410b988ce = $(`<div id="html_cf53b7be1d974b3cb05cdf5410b988ce" style="width: 100.0%; height: 100.0%;">라인형흡연구역</div>`)[0];
+            popup_e1fb11d59f3640e685d814d773bdc560.setContent(html_cf53b7be1d974b3cb05cdf5410b988ce);
+        
+
+        marker_c5c90654e1554262bd909bcf4076541c.bindPopup(popup_e1fb11d59f3640e685d814d773bdc560)
+        ;
+
+        
+    
+    
+            var marker_995c1e753ce543bfa1e8985fc5ae6a9c = L.marker(
+                [37.467798, 127.0413072],
+                {}
+            ).addTo(marker_cluster_d96b626185e445279d68c3fbd9149733);
+        
+    
+        var popup_8e6db1dbb6e140889d4f91f569179ca3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_94856cd450f040b8b897f55836918bd5 = $(`<div id="html_94856cd450f040b8b897f55836918bd5" style="width: 100.0%; height: 100.0%;">라인형흡연구역</div>`)[0];
+            popup_8e6db1dbb6e140889d4f91f569179ca3.setContent(html_94856cd450f040b8b897f55836918bd5);
+        
+
+        marker_995c1e753ce543bfa1e8985fc5ae6a9c.bindPopup(popup_8e6db1dbb6e140889d4f91f569179ca3)
+        ;
+
+        
+    
+    
+            var marker_8e8b5114daae4ce08c8ec35a9dffb098 = L.marker(
+                [37.468558, 127.0404711],
+                {}
+            ).addTo(marker_cluster_d96b626185e445279d68c3fbd9149733);
+        
+    
+        var popup_95a7e2c2a23a431a85f88256f50f9ac4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_df3ec59e298c440f9b8ee4820c7175c8 = $(`<div id="html_df3ec59e298c440f9b8ee4820c7175c8" style="width: 100.0%; height: 100.0%;">라인형흡연구역</div>`)[0];
+            popup_95a7e2c2a23a431a85f88256f50f9ac4.setContent(html_df3ec59e298c440f9b8ee4820c7175c8);
+        
+
+        marker_8e8b5114daae4ce08c8ec35a9dffb098.bindPopup(popup_95a7e2c2a23a431a85f88256f50f9ac4)
+        ;
+
+        
+    
+    
+            var marker_5aea6b5812984986a7e2651cde0b8b4a = L.marker(
+                [37.4724685, 127.03913],
+                {}
+            ).addTo(marker_cluster_d96b626185e445279d68c3fbd9149733);
+        
+    
+        var popup_91e06f3e079247a485532216540f25ea = L.popup({"maxWidth": "100%"});
+
+        
+            var html_82350bfc4c7146e98a446b567b8807d3 = $(`<div id="html_82350bfc4c7146e98a446b567b8807d3" style="width: 100.0%; height: 100.0%;">라인형흡연구역</div>`)[0];
+            popup_91e06f3e079247a485532216540f25ea.setContent(html_82350bfc4c7146e98a446b567b8807d3);
+        
+
+        marker_5aea6b5812984986a7e2651cde0b8b4a.bindPopup(popup_91e06f3e079247a485532216540f25ea)
+        ;
+
+        
+    
+    
+            var marker_167a5859ff564cb4ba5de8fea69e3e39 = L.marker(
+                [37.4605007, 127.0352614],
+                {}
+            ).addTo(marker_cluster_d96b626185e445279d68c3fbd9149733);
+        
+    
+        var popup_b2b36325b8bc44199853c018a22d2874 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1a54de2bb04648a7a3277f7653a69fcb = $(`<div id="html_1a54de2bb04648a7a3277f7653a69fcb" style="width: 100.0%; height: 100.0%;">라인형흡연구역</div>`)[0];
+            popup_b2b36325b8bc44199853c018a22d2874.setContent(html_1a54de2bb04648a7a3277f7653a69fcb);
+        
+
+        marker_167a5859ff564cb4ba5de8fea69e3e39.bindPopup(popup_b2b36325b8bc44199853c018a22d2874)
+        ;
+
+        
+    
+    
+            var marker_9ee23b844e3441d0a8da49b363dc031e = L.marker(
+                [37.4792167, 127.0412308],
+                {}
+            ).addTo(marker_cluster_d96b626185e445279d68c3fbd9149733);
+        
+    
+        var popup_d6be832ee08849759c222e38347edf20 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3bb6812619e740c5bbd3756878fece4c = $(`<div id="html_3bb6812619e740c5bbd3756878fece4c" style="width: 100.0%; height: 100.0%;">라인형흡연구역</div>`)[0];
+            popup_d6be832ee08849759c222e38347edf20.setContent(html_3bb6812619e740c5bbd3756878fece4c);
+        
+
+        marker_9ee23b844e3441d0a8da49b363dc031e.bindPopup(popup_d6be832ee08849759c222e38347edf20)
+        ;
+
+        
+    
+    
+            var marker_266d0d5f823e46f2b52c62019dd9c13d = L.marker(
+                [37.476245, 127.0456063],
+                {}
+            ).addTo(marker_cluster_d96b626185e445279d68c3fbd9149733);
+        
+    
+        var popup_ff36d250eecb4475927ded5973a6c2f3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_08b63f1301da44e0b4b0ed8b1d0b9b9c = $(`<div id="html_08b63f1301da44e0b4b0ed8b1d0b9b9c" style="width: 100.0%; height: 100.0%;">비대면흡연부스</div>`)[0];
+            popup_ff36d250eecb4475927ded5973a6c2f3.setContent(html_08b63f1301da44e0b4b0ed8b1d0b9b9c);
+        
+
+        marker_266d0d5f823e46f2b52c62019dd9c13d.bindPopup(popup_ff36d250eecb4475927ded5973a6c2f3)
+        ;
+
+        
+    
+    
+            var marker_7c2af78a1b96426c905d7280fdd25ac3 = L.marker(
+                [37.4687372, 127.0426789],
+                {}
+            ).addTo(marker_cluster_d96b626185e445279d68c3fbd9149733);
+        
+    
+        var popup_82cbd515bbac454e932e1210c66ee06d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_87a1aa4e1a564286a2dbe4b6fbba4334 = $(`<div id="html_87a1aa4e1a564286a2dbe4b6fbba4334" style="width: 100.0%; height: 100.0%;">라인형흡연구역</div>`)[0];
+            popup_82cbd515bbac454e932e1210c66ee06d.setContent(html_87a1aa4e1a564286a2dbe4b6fbba4334);
+        
+
+        marker_7c2af78a1b96426c905d7280fdd25ac3.bindPopup(popup_82cbd515bbac454e932e1210c66ee06d)
+        ;
+
+        
+    
+    
+            var marker_0235658230cc4078b834331649f8cebb = L.marker(
+                [37.4706784, 127.0392807],
+                {}
+            ).addTo(marker_cluster_d96b626185e445279d68c3fbd9149733);
+        
+    
+        var popup_5e84e08748264550bbf416abee4faad4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_584b1be2281a4e1a95fb784f694ae388 = $(`<div id="html_584b1be2281a4e1a95fb784f694ae388" style="width: 100.0%; height: 100.0%;">비대면흡연부스</div>`)[0];
+            popup_5e84e08748264550bbf416abee4faad4.setContent(html_584b1be2281a4e1a95fb784f694ae388);
+        
+
+        marker_0235658230cc4078b834331649f8cebb.bindPopup(popup_5e84e08748264550bbf416abee4faad4)
+        ;
+
+        
+    
+    
+            var marker_2af614aee55d4512a50daadbfa6984b3 = L.marker(
+                [37.466168, 127.0402043],
+                {}
+            ).addTo(marker_cluster_d96b626185e445279d68c3fbd9149733);
+        
+    
+        var popup_485bc43b8d8041c280da44dfb80ae50e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_36750bddc0f14471858042a8d0b22cc7 = $(`<div id="html_36750bddc0f14471858042a8d0b22cc7" style="width: 100.0%; height: 100.0%;">비대면흡연부스</div>`)[0];
+            popup_485bc43b8d8041c280da44dfb80ae50e.setContent(html_36750bddc0f14471858042a8d0b22cc7);
+        
+
+        marker_2af614aee55d4512a50daadbfa6984b3.bindPopup(popup_485bc43b8d8041c280da44dfb80ae50e)
+        ;
+
+        
+    
+    
+            var marker_87cfed65bcec4dc2880b88f9c57577ff = L.marker(
+                [37.4663329, 127.0358907],
+                {}
+            ).addTo(marker_cluster_d96b626185e445279d68c3fbd9149733);
+        
+    
+        var popup_cee9269ffdfd40c8b168afa2e7c603c5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c5844a3618f647ffba433c7bdaed7792 = $(`<div id="html_c5844a3618f647ffba433c7bdaed7792" style="width: 100.0%; height: 100.0%;">비대면흡연부스</div>`)[0];
+            popup_cee9269ffdfd40c8b168afa2e7c603c5.setContent(html_c5844a3618f647ffba433c7bdaed7792);
+        
+
+        marker_87cfed65bcec4dc2880b88f9c57577ff.bindPopup(popup_cee9269ffdfd40c8b168afa2e7c603c5)
+        ;
+
+        
+    
+    
+            var marker_cluster_daf84d237a5941d99fe8cd523395af74 = L.markerClusterGroup(
+                {}
+            );
+            map_696713c2d3df40c2bfcc420fd84a9313.addLayer(marker_cluster_daf84d237a5941d99fe8cd523395af74);
+        
+    
+            var marker_021454a920bb4e7c9d40bc7fe126d5c0 = L.marker(
+                [37.4759427, 126.9820712],
+                {}
+            ).addTo(marker_cluster_daf84d237a5941d99fe8cd523395af74);
+        
+    
+        var popup_2eeb939e3a2d4eee908447b33bd7fb86 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0218a8a08d224d29b117ce94d49aaed9 = $(`<div id="html_0218a8a08d224d29b117ce94d49aaed9" style="width: 100.0%; height: 100.0%;">개방형흡연부스</div>`)[0];
+            popup_2eeb939e3a2d4eee908447b33bd7fb86.setContent(html_0218a8a08d224d29b117ce94d49aaed9);
+        
+
+        marker_021454a920bb4e7c9d40bc7fe126d5c0.bindPopup(popup_2eeb939e3a2d4eee908447b33bd7fb86)
+        ;
+
+        
+    
+    
+            var marker_ca3bdc3d71d742c9afd874c00a94c2bd = L.marker(
+                [37.4972107, 127.0273739],
+                {}
+            ).addTo(marker_cluster_daf84d237a5941d99fe8cd523395af74);
+        
+    
+        var popup_0fc87c9624704c31a3232b8623d99bda = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8a1b47a571ad46bfb0e9dab9a09249c6 = $(`<div id="html_8a1b47a571ad46bfb0e9dab9a09249c6" style="width: 100.0%; height: 100.0%;">개방형흡연부스</div>`)[0];
+            popup_0fc87c9624704c31a3232b8623d99bda.setContent(html_8a1b47a571ad46bfb0e9dab9a09249c6);
+        
+
+        marker_ca3bdc3d71d742c9afd874c00a94c2bd.bindPopup(popup_0fc87c9624704c31a3232b8623d99bda)
+        ;
+
+        
+    
+    
+            var marker_605c2a129b1e494f83d4257cf9587e1e = L.marker(
+                [37.482139, 126.9968963],
+                {}
+            ).addTo(marker_cluster_daf84d237a5941d99fe8cd523395af74);
+        
+    
+        var popup_fb18ee432c6d49e29d7075a1057b4791 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1d72c57665864832a28268792a9c9dfd = $(`<div id="html_1d72c57665864832a28268792a9c9dfd" style="width: 100.0%; height: 100.0%;">개방형흡연부스</div>`)[0];
+            popup_fb18ee432c6d49e29d7075a1057b4791.setContent(html_1d72c57665864832a28268792a9c9dfd);
+        
+
+        marker_605c2a129b1e494f83d4257cf9587e1e.bindPopup(popup_fb18ee432c6d49e29d7075a1057b4791)
+        ;
+
+        
+    
+    
+            var marker_3af9dd64ea994a518bb1754f748c066e = L.marker(
+                [37.4776904, 126.9829746],
+                {}
+            ).addTo(marker_cluster_daf84d237a5941d99fe8cd523395af74);
+        
+    
+        var popup_1024fde7e7ca4c5baff840f0cce493ed = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d601c718864a4cd88d7790f83b4c8dc9 = $(`<div id="html_d601c718864a4cd88d7790f83b4c8dc9" style="width: 100.0%; height: 100.0%;">개방형흡연부스</div>`)[0];
+            popup_1024fde7e7ca4c5baff840f0cce493ed.setContent(html_d601c718864a4cd88d7790f83b4c8dc9);
+        
+
+        marker_3af9dd64ea994a518bb1754f748c066e.bindPopup(popup_1024fde7e7ca4c5baff840f0cce493ed)
+        ;
+
+        
+    
+    
+            var marker_c6103e44a0734ecfa1724dd025f8387f = L.marker(
+                [37.4955152, 127.027742],
+                {}
+            ).addTo(marker_cluster_daf84d237a5941d99fe8cd523395af74);
+        
+    
+        var popup_9471935cee6846489111532d9aae0d38 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2e60393675824a0ca2efb8e73f02d567 = $(`<div id="html_2e60393675824a0ca2efb8e73f02d567" style="width: 100.0%; height: 100.0%;">개방형흡연부스</div>`)[0];
+            popup_9471935cee6846489111532d9aae0d38.setContent(html_2e60393675824a0ca2efb8e73f02d567);
+        
+
+        marker_c6103e44a0734ecfa1724dd025f8387f.bindPopup(popup_9471935cee6846489111532d9aae0d38)
+        ;
+
+        
+    
+    
+            var marker_4a72300f68f04009b6638a3d79f0e38f = L.marker(
+                [37.4939873, 127.0282119],
+                {}
+            ).addTo(marker_cluster_daf84d237a5941d99fe8cd523395af74);
+        
+    
+        var popup_5d27a8197a3644d395ac375e52c05599 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ea5d9a79fb4b44cd881c846b9f19062f = $(`<div id="html_ea5d9a79fb4b44cd881c846b9f19062f" style="width: 100.0%; height: 100.0%;">개방형흡연부스</div>`)[0];
+            popup_5d27a8197a3644d395ac375e52c05599.setContent(html_ea5d9a79fb4b44cd881c846b9f19062f);
+        
+
+        marker_4a72300f68f04009b6638a3d79f0e38f.bindPopup(popup_5d27a8197a3644d395ac375e52c05599)
+        ;
+
+        
+    
+    
+            var marker_c372480033ed400cb92af79b05a79efa = L.marker(
+                [37.4590038, 127.0405502],
+                {}
+            ).addTo(marker_cluster_daf84d237a5941d99fe8cd523395af74);
+        
+    
+        var popup_9f7fd25ca6a14902925fd457bb439f89 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_53454b6c007946d69214bb660a1b1a27 = $(`<div id="html_53454b6c007946d69214bb660a1b1a27" style="width: 100.0%; height: 100.0%;">개방형흡연부스</div>`)[0];
+            popup_9f7fd25ca6a14902925fd457bb439f89.setContent(html_53454b6c007946d69214bb660a1b1a27);
+        
+
+        marker_c372480033ed400cb92af79b05a79efa.bindPopup(popup_9f7fd25ca6a14902925fd457bb439f89)
+        ;
+
+        
+    
+    
+            var marker_3d218b488e7c4866b9783663d1d2c186 = L.marker(
+                [37.4839913, 126.9824358],
+                {}
+            ).addTo(marker_cluster_daf84d237a5941d99fe8cd523395af74);
+        
+    
+        var popup_414e7cf4ea8c45f7b27ffec9c547a7a5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_43f40c7241e54b17806476649729b57f = $(`<div id="html_43f40c7241e54b17806476649729b57f" style="width: 100.0%; height: 100.0%;">개방형흡연부스</div>`)[0];
+            popup_414e7cf4ea8c45f7b27ffec9c547a7a5.setContent(html_43f40c7241e54b17806476649729b57f);
+        
+
+        marker_3d218b488e7c4866b9783663d1d2c186.bindPopup(popup_414e7cf4ea8c45f7b27ffec9c547a7a5)
+        ;
+
+        
+    
+    
+            var marker_cababcd5a7c049c2bf36419e746cdd06 = L.marker(
+                [37.4814747, 126.9830646],
+                {}
+            ).addTo(marker_cluster_daf84d237a5941d99fe8cd523395af74);
+        
+    
+        var popup_1803ac27d43348d0b71175c535ee116c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_55b6459709584e5bab5802338a33e3a2 = $(`<div id="html_55b6459709584e5bab5802338a33e3a2" style="width: 100.0%; height: 100.0%;">개방형흡연부스</div>`)[0];
+            popup_1803ac27d43348d0b71175c535ee116c.setContent(html_55b6459709584e5bab5802338a33e3a2);
+        
+
+        marker_cababcd5a7c049c2bf36419e746cdd06.bindPopup(popup_1803ac27d43348d0b71175c535ee116c)
+        ;
+
+        
+    
+    
+            var marker_36dae338b37643beba5a40c6911a555b = L.marker(
+                [37.4788648, 126.9829089],
+                {}
+            ).addTo(marker_cluster_daf84d237a5941d99fe8cd523395af74);
+        
+    
+        var popup_a6755f5a156246e6833f285195132387 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4d1790999da741589036ed17b3245e68 = $(`<div id="html_4d1790999da741589036ed17b3245e68" style="width: 100.0%; height: 100.0%;">개방형흡연부스</div>`)[0];
+            popup_a6755f5a156246e6833f285195132387.setContent(html_4d1790999da741589036ed17b3245e68);
+        
+
+        marker_36dae338b37643beba5a40c6911a555b.bindPopup(popup_a6755f5a156246e6833f285195132387)
+        ;
+
+        
+    
+    
+            var marker_d7cc787e65c5483fb4b45bc31942d447 = L.marker(
+                [37.4848873, 127.0328967],
+                {}
+            ).addTo(marker_cluster_daf84d237a5941d99fe8cd523395af74);
+        
+    
+        var popup_73c8cbbb2aec4938b4e3877e27a211cc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ed98529a39db4c55970f57b8f5245924 = $(`<div id="html_ed98529a39db4c55970f57b8f5245924" style="width: 100.0%; height: 100.0%;">라인형흡연구역</div>`)[0];
+            popup_73c8cbbb2aec4938b4e3877e27a211cc.setContent(html_ed98529a39db4c55970f57b8f5245924);
+        
+
+        marker_d7cc787e65c5483fb4b45bc31942d447.bindPopup(popup_73c8cbbb2aec4938b4e3877e27a211cc)
+        ;
+
+        
+    
+    
+            var marker_54db33ee3f7c427ea855a8d1d9d50853 = L.marker(
+                [37.4835322, 127.0342247],
+                {}
+            ).addTo(marker_cluster_daf84d237a5941d99fe8cd523395af74);
+        
+    
+        var popup_4d951d9c0d8a4e0691b7866d9ad35144 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0d10a7c5bd5a469d9327be9906b41e86 = $(`<div id="html_0d10a7c5bd5a469d9327be9906b41e86" style="width: 100.0%; height: 100.0%;">라인형흡연구역</div>`)[0];
+            popup_4d951d9c0d8a4e0691b7866d9ad35144.setContent(html_0d10a7c5bd5a469d9327be9906b41e86);
+        
+
+        marker_54db33ee3f7c427ea855a8d1d9d50853.bindPopup(popup_4d951d9c0d8a4e0691b7866d9ad35144)
+        ;
+
+        
+    
+    
+            var marker_e865d40232d5442fad095829f07c8931 = L.marker(
+                [37.4835872, 127.0326987],
+                {}
+            ).addTo(marker_cluster_daf84d237a5941d99fe8cd523395af74);
+        
+    
+        var popup_234a064d7b2c4a87810f5badbe49ff45 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b5961c05c0214702876e4781d940910d = $(`<div id="html_b5961c05c0214702876e4781d940910d" style="width: 100.0%; height: 100.0%;">폐쇄형흡연부스</div>`)[0];
+            popup_234a064d7b2c4a87810f5badbe49ff45.setContent(html_b5961c05c0214702876e4781d940910d);
+        
+
+        marker_e865d40232d5442fad095829f07c8931.bindPopup(popup_234a064d7b2c4a87810f5badbe49ff45)
+        ;
+
+        
+    
+    
+            var marker_b4bf219384c44d3ab228664a119473c9 = L.marker(
+                [37.5037208, 127.0240967],
+                {}
+            ).addTo(marker_cluster_daf84d237a5941d99fe8cd523395af74);
+        
+    
+        var popup_5c8a8a63abc4443798aa224d093b903e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bcdf872a5c6a4b2892c7eb403339f04b = $(`<div id="html_bcdf872a5c6a4b2892c7eb403339f04b" style="width: 100.0%; height: 100.0%;">개방형흡연구역</div>`)[0];
+            popup_5c8a8a63abc4443798aa224d093b903e.setContent(html_bcdf872a5c6a4b2892c7eb403339f04b);
+        
+
+        marker_b4bf219384c44d3ab228664a119473c9.bindPopup(popup_5c8a8a63abc4443798aa224d093b903e)
+        ;
+
+        
+    
+    
+            var marker_d8846bbbf9de498b88b621ee55132258 = L.marker(
+                [37.482717, 127.0349215],
+                {}
+            ).addTo(marker_cluster_daf84d237a5941d99fe8cd523395af74);
+        
+    
+        var popup_c219d2909a034beaafdb1327b13ad70a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8b692a06fcd74b12b1bc1d5fc245308b = $(`<div id="html_8b692a06fcd74b12b1bc1d5fc245308b" style="width: 100.0%; height: 100.0%;">개방형흡연구역</div>`)[0];
+            popup_c219d2909a034beaafdb1327b13ad70a.setContent(html_8b692a06fcd74b12b1bc1d5fc245308b);
+        
+
+        marker_d8846bbbf9de498b88b621ee55132258.bindPopup(popup_c219d2909a034beaafdb1327b13ad70a)
+        ;
+
+        
+    
+    
+            var marker_45371e65e6f04108b14c761f4259c1aa = L.marker(
+                [37.4872446, 127.0327813],
+                {}
+            ).addTo(marker_cluster_daf84d237a5941d99fe8cd523395af74);
+        
+    
+        var popup_adc12bb0febe418fb7384b3e45026a64 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b086f9357842470888f737ffdaea815d = $(`<div id="html_b086f9357842470888f737ffdaea815d" style="width: 100.0%; height: 100.0%;">부분개방형흡연실</div>`)[0];
+            popup_adc12bb0febe418fb7384b3e45026a64.setContent(html_b086f9357842470888f737ffdaea815d);
+        
+
+        marker_45371e65e6f04108b14c761f4259c1aa.bindPopup(popup_adc12bb0febe418fb7384b3e45026a64)
+        ;
+
+        
+    
+    
+            var marker_28c6d6de83f34a98acdd4774361a98ac = L.marker(
+                [37.5041299, 127.0030692],
+                {}
+            ).addTo(marker_cluster_daf84d237a5941d99fe8cd523395af74);
+        
+    
+        var popup_77c96dbac10648aa9cc64a206ca40516 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f543c26ac43a48638b1982a398bb3d67 = $(`<div id="html_f543c26ac43a48638b1982a398bb3d67" style="width: 100.0%; height: 100.0%;">부분개방형흡연부스</div>`)[0];
+            popup_77c96dbac10648aa9cc64a206ca40516.setContent(html_f543c26ac43a48638b1982a398bb3d67);
+        
+
+        marker_28c6d6de83f34a98acdd4774361a98ac.bindPopup(popup_77c96dbac10648aa9cc64a206ca40516)
+        ;
+
+        
+    
+    
+            var marker_d0f8fca0e23d4f8097b7644ea4aa2fa8 = L.marker(
+                [37.5060582, 127.0033885],
+                {}
+            ).addTo(marker_cluster_daf84d237a5941d99fe8cd523395af74);
+        
+    
+        var popup_c1f1a89cee2441ac86072bab4314717b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fe4708a961384d5cbdcb245dd1581439 = $(`<div id="html_fe4708a961384d5cbdcb245dd1581439" style="width: 100.0%; height: 100.0%;">부분개방형흡연부스</div>`)[0];
+            popup_c1f1a89cee2441ac86072bab4314717b.setContent(html_fe4708a961384d5cbdcb245dd1581439);
+        
+
+        marker_d0f8fca0e23d4f8097b7644ea4aa2fa8.bindPopup(popup_c1f1a89cee2441ac86072bab4314717b)
+        ;
+
+        
+    
+    
+            var marker_7912e073174f44afb2e6f79e06f7cd2e = L.marker(
+                [37.5041437, 126.9970518],
+                {}
+            ).addTo(marker_cluster_daf84d237a5941d99fe8cd523395af74);
+        
+    
+        var popup_8dd3e22e8e4543d2af6c8b6cc7222c14 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_24b8c21fc4234fd5a6040afefee9ff49 = $(`<div id="html_24b8c21fc4234fd5a6040afefee9ff49" style="width: 100.0%; height: 100.0%;">개방형흡연구역</div>`)[0];
+            popup_8dd3e22e8e4543d2af6c8b6cc7222c14.setContent(html_24b8c21fc4234fd5a6040afefee9ff49);
+        
+
+        marker_7912e073174f44afb2e6f79e06f7cd2e.bindPopup(popup_8dd3e22e8e4543d2af6c8b6cc7222c14)
+        ;
+
+        
+    
+    
+            var marker_162af3c4cc8a40c3a52ca8c9cb65619e = L.marker(
+                [37.5047736, 127.0049178],
+                {}
+            ).addTo(marker_cluster_daf84d237a5941d99fe8cd523395af74);
+        
+    
+        var popup_57cde7d1bd184a75b8b6411257178cd0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d2f9c985f29a4f3798a11e6cc2c5e24b = $(`<div id="html_d2f9c985f29a4f3798a11e6cc2c5e24b" style="width: 100.0%; height: 100.0%;">부분개방형흡연구역</div>`)[0];
+            popup_57cde7d1bd184a75b8b6411257178cd0.setContent(html_d2f9c985f29a4f3798a11e6cc2c5e24b);
+        
+
+        marker_162af3c4cc8a40c3a52ca8c9cb65619e.bindPopup(popup_57cde7d1bd184a75b8b6411257178cd0)
+        ;
+
+        
+    
+    
+            var marker_b7220a723a2c48ab87dc453ff3f87aee = L.marker(
+                [37.4832626, 127.036199],
+                {}
+            ).addTo(marker_cluster_daf84d237a5941d99fe8cd523395af74);
+        
+    
+        var popup_5d4d8857e9c146dbb4525162c1b48d36 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8e5cbfbc8bb34a3fb40b785ef6278272 = $(`<div id="html_8e5cbfbc8bb34a3fb40b785ef6278272" style="width: 100.0%; height: 100.0%;">라인형흡연구역</div>`)[0];
+            popup_5d4d8857e9c146dbb4525162c1b48d36.setContent(html_8e5cbfbc8bb34a3fb40b785ef6278272);
+        
+
+        marker_b7220a723a2c48ab87dc453ff3f87aee.bindPopup(popup_5d4d8857e9c146dbb4525162c1b48d36)
+        ;
+
+        
+    
+    
+            var marker_ea86661cd65b4d6abb34062700c5a3e1 = L.marker(
+                [37.4818374, 127.0376691],
+                {}
+            ).addTo(marker_cluster_daf84d237a5941d99fe8cd523395af74);
+        
+    
+        var popup_1fa2557e295047e8b666a663fd9805a5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8a77ae11de764a00bb92d63e498edf7c = $(`<div id="html_8a77ae11de764a00bb92d63e498edf7c" style="width: 100.0%; height: 100.0%;">라인형흡연구역</div>`)[0];
+            popup_1fa2557e295047e8b666a663fd9805a5.setContent(html_8a77ae11de764a00bb92d63e498edf7c);
+        
+
+        marker_ea86661cd65b4d6abb34062700c5a3e1.bindPopup(popup_1fa2557e295047e8b666a663fd9805a5)
+        ;
+
+        
+    
+    
+            var marker_27b2d0ef93984d16bc14fef193e335bd = L.marker(
+                [37.4778565, 126.9758417],
+                {}
+            ).addTo(marker_cluster_daf84d237a5941d99fe8cd523395af74);
+        
+    
+        var popup_2afa5f85f1e047ffb2d6e1c8beef0273 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9f4dbd5a062b4474bb3382865be1a90e = $(`<div id="html_9f4dbd5a062b4474bb3382865be1a90e" style="width: 100.0%; height: 100.0%;">라인형흡연구역</div>`)[0];
+            popup_2afa5f85f1e047ffb2d6e1c8beef0273.setContent(html_9f4dbd5a062b4474bb3382865be1a90e);
+        
+
+        marker_27b2d0ef93984d16bc14fef193e335bd.bindPopup(popup_2afa5f85f1e047ffb2d6e1c8beef0273)
+        ;
+
+        
+    
+    
+            var marker_704dafbf5fda4a85980cb2749c6ea3dc = L.marker(
+                [37.4819647, 127.042353],
+                {}
+            ).addTo(marker_cluster_daf84d237a5941d99fe8cd523395af74);
+        
+    
+        var popup_bd4f0eca96cc4587a1930b8352a170aa = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f9f75e0892fb434ba0359f4b9a4c8f65 = $(`<div id="html_f9f75e0892fb434ba0359f4b9a4c8f65" style="width: 100.0%; height: 100.0%;">라인형흡연구역</div>`)[0];
+            popup_bd4f0eca96cc4587a1930b8352a170aa.setContent(html_f9f75e0892fb434ba0359f4b9a4c8f65);
+        
+
+        marker_704dafbf5fda4a85980cb2749c6ea3dc.bindPopup(popup_bd4f0eca96cc4587a1930b8352a170aa)
+        ;
+
+        
+    
+    
+            var marker_bffc4783b8a743c284f493acdad32e92 = L.marker(
+                [37.4802783, 127.0408436],
+                {}
+            ).addTo(marker_cluster_daf84d237a5941d99fe8cd523395af74);
+        
+    
+        var popup_f607a45d810e49f3ac71349e9bb59ddc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b9574dad71eb46068f22f406dd7670dd = $(`<div id="html_b9574dad71eb46068f22f406dd7670dd" style="width: 100.0%; height: 100.0%;">라인형흡연구역</div>`)[0];
+            popup_f607a45d810e49f3ac71349e9bb59ddc.setContent(html_b9574dad71eb46068f22f406dd7670dd);
+        
+
+        marker_bffc4783b8a743c284f493acdad32e92.bindPopup(popup_f607a45d810e49f3ac71349e9bb59ddc)
+        ;
+
+        
+    
+    
+            var marker_9d16af42ae874768b1290299494bd452 = L.marker(
+                [37.4872446, 127.0327813],
+                {}
+            ).addTo(marker_cluster_daf84d237a5941d99fe8cd523395af74);
+        
+    
+        var popup_9e8e537365b4460498a36aea7bfe02b6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6e488b465c8b49cdaa3b1843c062691a = $(`<div id="html_6e488b465c8b49cdaa3b1843c062691a" style="width: 100.0%; height: 100.0%;">라인형흡연구역</div>`)[0];
+            popup_9e8e537365b4460498a36aea7bfe02b6.setContent(html_6e488b465c8b49cdaa3b1843c062691a);
+        
+
+        marker_9d16af42ae874768b1290299494bd452.bindPopup(popup_9e8e537365b4460498a36aea7bfe02b6)
+        ;
+
+        
+    
+    
+            var marker_994aa7b493f648d4b5b9d4b37a57d150 = L.marker(
+                [37.4769684, 127.039138],
+                {}
+            ).addTo(marker_cluster_daf84d237a5941d99fe8cd523395af74);
+        
+    
+        var popup_e7efe1e077d44c46a4c2cedd2160e611 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f5bacf7877094ebaa5d09d7a4675685e = $(`<div id="html_f5bacf7877094ebaa5d09d7a4675685e" style="width: 100.0%; height: 100.0%;">라인형흡연구역</div>`)[0];
+            popup_e7efe1e077d44c46a4c2cedd2160e611.setContent(html_f5bacf7877094ebaa5d09d7a4675685e);
+        
+
+        marker_994aa7b493f648d4b5b9d4b37a57d150.bindPopup(popup_e7efe1e077d44c46a4c2cedd2160e611)
+        ;
+
+        
+    
+    
+            var marker_742707913c8a4b22853ee030e044a827 = L.marker(
+                [37.4757664, 127.0391387],
+                {}
+            ).addTo(marker_cluster_daf84d237a5941d99fe8cd523395af74);
+        
+    
+        var popup_215c4b59f4be4fe69021b91b0935f38d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f3ad5283e36845ecb745b73957925087 = $(`<div id="html_f3ad5283e36845ecb745b73957925087" style="width: 100.0%; height: 100.0%;">라인형흡연구역</div>`)[0];
+            popup_215c4b59f4be4fe69021b91b0935f38d.setContent(html_f3ad5283e36845ecb745b73957925087);
+        
+
+        marker_742707913c8a4b22853ee030e044a827.bindPopup(popup_215c4b59f4be4fe69021b91b0935f38d)
+        ;
+
+        
+    
+    
+            var marker_7ab36c66659a47f49f256323d267d2d5 = L.marker(
+                [37.478246, 127.0380204],
+                {}
+            ).addTo(marker_cluster_daf84d237a5941d99fe8cd523395af74);
+        
+    
+        var popup_7d07fa4227694d048cfd525029b4391d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b7cd41dd8abc4c7ca8beb405563a3cec = $(`<div id="html_b7cd41dd8abc4c7ca8beb405563a3cec" style="width: 100.0%; height: 100.0%;">라인형흡연구역</div>`)[0];
+            popup_7d07fa4227694d048cfd525029b4391d.setContent(html_b7cd41dd8abc4c7ca8beb405563a3cec);
+        
+
+        marker_7ab36c66659a47f49f256323d267d2d5.bindPopup(popup_7d07fa4227694d048cfd525029b4391d)
+        ;
+
+        
+    
+    
+            var marker_27fef77c09664f95be5443321cbeabf2 = L.marker(
+                [37.4768135, 127.0381496],
+                {}
+            ).addTo(marker_cluster_daf84d237a5941d99fe8cd523395af74);
+        
+    
+        var popup_0fb0762528ab4be7ae90c39897dff005 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e670a9855e0e45f787f512ae5d5c8c90 = $(`<div id="html_e670a9855e0e45f787f512ae5d5c8c90" style="width: 100.0%; height: 100.0%;">라인형흡연구역</div>`)[0];
+            popup_0fb0762528ab4be7ae90c39897dff005.setContent(html_e670a9855e0e45f787f512ae5d5c8c90);
+        
+
+        marker_27fef77c09664f95be5443321cbeabf2.bindPopup(popup_0fb0762528ab4be7ae90c39897dff005)
+        ;
+
+        
+    
+    
+            var marker_a4fe8d9d03cf4f1cbd04dfada795cd83 = L.marker(
+                [37.4754576, 127.0351845],
+                {}
+            ).addTo(marker_cluster_daf84d237a5941d99fe8cd523395af74);
+        
+    
+        var popup_b1b7f525f4284697adeaa380383ec650 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b164bfac01414ac68ba7545b3cdfb3d8 = $(`<div id="html_b164bfac01414ac68ba7545b3cdfb3d8" style="width: 100.0%; height: 100.0%;">라인형흡연구역</div>`)[0];
+            popup_b1b7f525f4284697adeaa380383ec650.setContent(html_b164bfac01414ac68ba7545b3cdfb3d8);
+        
+
+        marker_a4fe8d9d03cf4f1cbd04dfada795cd83.bindPopup(popup_b1b7f525f4284697adeaa380383ec650)
+        ;
+
+        
+    
+    
+            var marker_136e94b0765446609281699c5d9c828d = L.marker(
+                [37.4872446, 127.0327813],
+                {}
+            ).addTo(marker_cluster_daf84d237a5941d99fe8cd523395af74);
+        
+    
+        var popup_30f7e141615c48af90df3dbec136d72d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ea28fa4cd40345ec9b69ab8652eea417 = $(`<div id="html_ea28fa4cd40345ec9b69ab8652eea417" style="width: 100.0%; height: 100.0%;">라인형흡연구역</div>`)[0];
+            popup_30f7e141615c48af90df3dbec136d72d.setContent(html_ea28fa4cd40345ec9b69ab8652eea417);
+        
+
+        marker_136e94b0765446609281699c5d9c828d.bindPopup(popup_30f7e141615c48af90df3dbec136d72d)
+        ;
+
+        
+    
+    
+            var marker_85fda5a7ff774c8a933019d90699879c = L.marker(
+                [37.482717, 127.0349215],
+                {}
+            ).addTo(marker_cluster_daf84d237a5941d99fe8cd523395af74);
+        
+    
+        var popup_9632609280f64bcf836d7b8cb666fb0e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b5f00f69bccb4a71aee070c4c200c883 = $(`<div id="html_b5f00f69bccb4a71aee070c4c200c883" style="width: 100.0%; height: 100.0%;">라인형흡연구역</div>`)[0];
+            popup_9632609280f64bcf836d7b8cb666fb0e.setContent(html_b5f00f69bccb4a71aee070c4c200c883);
+        
+
+        marker_85fda5a7ff774c8a933019d90699879c.bindPopup(popup_9632609280f64bcf836d7b8cb666fb0e)
+        ;
+
+        
+    
+    
+            var marker_ea5c91596a4b47e19bdffd9042f45d9f = L.marker(
+                [37.4835322, 127.0342247],
+                {}
+            ).addTo(marker_cluster_daf84d237a5941d99fe8cd523395af74);
+        
+    
+        var popup_aad792df0453472eb1b10db93780ca28 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fad4cb45e66f44e29aeb513a89ab3943 = $(`<div id="html_fad4cb45e66f44e29aeb513a89ab3943" style="width: 100.0%; height: 100.0%;">라인형흡연구역</div>`)[0];
+            popup_aad792df0453472eb1b10db93780ca28.setContent(html_fad4cb45e66f44e29aeb513a89ab3943);
+        
+
+        marker_ea5c91596a4b47e19bdffd9042f45d9f.bindPopup(popup_aad792df0453472eb1b10db93780ca28)
+        ;
+
+        
+    
+    
+            var marker_3193d8530f2a4508aa94430a3c0f5a49 = L.marker(
+                [37.4758553, 127.0350098],
+                {}
+            ).addTo(marker_cluster_daf84d237a5941d99fe8cd523395af74);
+        
+    
+        var popup_7997bd4bdc83419a8d0d2c1825fe57fa = L.popup({"maxWidth": "100%"});
+
+        
+            var html_16fb2ade16af4feb9b787191fc4f6bd7 = $(`<div id="html_16fb2ade16af4feb9b787191fc4f6bd7" style="width: 100.0%; height: 100.0%;">비대면흡연부스</div>`)[0];
+            popup_7997bd4bdc83419a8d0d2c1825fe57fa.setContent(html_16fb2ade16af4feb9b787191fc4f6bd7);
+        
+
+        marker_3193d8530f2a4508aa94430a3c0f5a49.bindPopup(popup_7997bd4bdc83419a8d0d2c1825fe57fa)
+        ;
+
+        
+    
+    
+            var marker_a28c234bcce744e9ac2096ee6afcaeeb = L.marker(
+                [37.4772356, 127.0361045],
+                {}
+            ).addTo(marker_cluster_daf84d237a5941d99fe8cd523395af74);
+        
+    
+        var popup_bda3f6c5d15847ddbe2fd27faff2c2ca = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6f1ec554e4ae492d98f9af4da41d978f = $(`<div id="html_6f1ec554e4ae492d98f9af4da41d978f" style="width: 100.0%; height: 100.0%;">비대면흡연부스</div>`)[0];
+            popup_bda3f6c5d15847ddbe2fd27faff2c2ca.setContent(html_6f1ec554e4ae492d98f9af4da41d978f);
+        
+
+        marker_a28c234bcce744e9ac2096ee6afcaeeb.bindPopup(popup_bda3f6c5d15847ddbe2fd27faff2c2ca)
+        ;
+
+        
+    
+    
+            var marker_feba540421d54050805241a01316b001 = L.marker(
+                [37.4789077, 127.0379486],
+                {}
+            ).addTo(marker_cluster_daf84d237a5941d99fe8cd523395af74);
+        
+    
+        var popup_bbd51a315d1d4eea819d06eb5b24ade5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8fad795474fd4ccc85634ead0831be50 = $(`<div id="html_8fad795474fd4ccc85634ead0831be50" style="width: 100.0%; height: 100.0%;">비대면흡연부스</div>`)[0];
+            popup_bbd51a315d1d4eea819d06eb5b24ade5.setContent(html_8fad795474fd4ccc85634ead0831be50);
+        
+
+        marker_feba540421d54050805241a01316b001.bindPopup(popup_bbd51a315d1d4eea819d06eb5b24ade5)
+        ;
+
+        
+    
+    
+            var marker_2e8064dcbf8041c28f30bf3c3b63866e = L.marker(
+                [37.476351, 127.0419973],
+                {}
+            ).addTo(marker_cluster_daf84d237a5941d99fe8cd523395af74);
+        
+    
+        var popup_e9faa8dc237b419f8b2eb98b7c6d9889 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2209288f215841b4a01752dfc84c5222 = $(`<div id="html_2209288f215841b4a01752dfc84c5222" style="width: 100.0%; height: 100.0%;">라인형흡연구역</div>`)[0];
+            popup_e9faa8dc237b419f8b2eb98b7c6d9889.setContent(html_2209288f215841b4a01752dfc84c5222);
+        
+
+        marker_2e8064dcbf8041c28f30bf3c3b63866e.bindPopup(popup_e9faa8dc237b419f8b2eb98b7c6d9889)
+        ;
+
+        
+    
+    
+            var marker_28ebf20a87244f5f90f65a5f46b093db = L.marker(
+                [37.4766141, 127.0441206],
+                {}
+            ).addTo(marker_cluster_daf84d237a5941d99fe8cd523395af74);
+        
+    
+        var popup_9ae77826caba4a34938e9d7b766b4231 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d0a8c3bf91ec40ef8ffe0ad96587a7b1 = $(`<div id="html_d0a8c3bf91ec40ef8ffe0ad96587a7b1" style="width: 100.0%; height: 100.0%;">라인형흡연구역</div>`)[0];
+            popup_9ae77826caba4a34938e9d7b766b4231.setContent(html_d0a8c3bf91ec40ef8ffe0ad96587a7b1);
+        
+
+        marker_28ebf20a87244f5f90f65a5f46b093db.bindPopup(popup_9ae77826caba4a34938e9d7b766b4231)
+        ;
+
+        
+    
+    
+            var marker_ba585b6b81f649d8915bb57217b4e930 = L.marker(
+                [37.4809666, 127.0410301],
+                {}
+            ).addTo(marker_cluster_daf84d237a5941d99fe8cd523395af74);
+        
+    
+        var popup_6131fe7b0e194acea0814dec2788ee1b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_21478a2d05104bceb772d501bb3e99ce = $(`<div id="html_21478a2d05104bceb772d501bb3e99ce" style="width: 100.0%; height: 100.0%;">비대면흡연부스</div>`)[0];
+            popup_6131fe7b0e194acea0814dec2788ee1b.setContent(html_21478a2d05104bceb772d501bb3e99ce);
+        
+
+        marker_ba585b6b81f649d8915bb57217b4e930.bindPopup(popup_6131fe7b0e194acea0814dec2788ee1b)
+        ;
+
+        
+    
+    
+            var marker_b72be779446d4fbe93bfb2d2504a06c3 = L.marker(
+                [37.4714799, 127.0503767],
+                {}
+            ).addTo(marker_cluster_daf84d237a5941d99fe8cd523395af74);
+        
+    
+        var popup_8cc1ebfb2024447b8768530ce3618f1a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0459ce420d484a7f8f3f7c0206ce148e = $(`<div id="html_0459ce420d484a7f8f3f7c0206ce148e" style="width: 100.0%; height: 100.0%;">라인형흡연구역</div>`)[0];
+            popup_8cc1ebfb2024447b8768530ce3618f1a.setContent(html_0459ce420d484a7f8f3f7c0206ce148e);
+        
+
+        marker_b72be779446d4fbe93bfb2d2504a06c3.bindPopup(popup_8cc1ebfb2024447b8768530ce3618f1a)
+        ;
+
+        
+    
+    
+            var marker_d19b45fc9f8b43fb9b8d9eb4d2747814 = L.marker(
+                [37.4710986, 127.0478853],
+                {}
+            ).addTo(marker_cluster_daf84d237a5941d99fe8cd523395af74);
+        
+    
+        var popup_7cb6503e25dc4a228bbc5ab564b04af6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4bdff331f72542b5ae6e65e5f6934dc0 = $(`<div id="html_4bdff331f72542b5ae6e65e5f6934dc0" style="width: 100.0%; height: 100.0%;">라인형흡연구역</div>`)[0];
+            popup_7cb6503e25dc4a228bbc5ab564b04af6.setContent(html_4bdff331f72542b5ae6e65e5f6934dc0);
+        
+
+        marker_d19b45fc9f8b43fb9b8d9eb4d2747814.bindPopup(popup_7cb6503e25dc4a228bbc5ab564b04af6)
+        ;
+
+        
+    
+    
+            var marker_0ace6d25c35c4f5c87100c2278264c74 = L.marker(
+                [37.4696165, 127.0478012],
+                {}
+            ).addTo(marker_cluster_daf84d237a5941d99fe8cd523395af74);
+        
+    
+        var popup_babdb66410304e9c9a47104b710cf324 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_76ec53ab6ba34a23b1c19fa7f48dd070 = $(`<div id="html_76ec53ab6ba34a23b1c19fa7f48dd070" style="width: 100.0%; height: 100.0%;">라인형흡연구역</div>`)[0];
+            popup_babdb66410304e9c9a47104b710cf324.setContent(html_76ec53ab6ba34a23b1c19fa7f48dd070);
+        
+
+        marker_0ace6d25c35c4f5c87100c2278264c74.bindPopup(popup_babdb66410304e9c9a47104b710cf324)
+        ;
+
+        
+    
+    
+            var marker_cd764fc65f5d414896aa18d6302e255c = L.marker(
+                [37.4700505, 127.0443014],
+                {}
+            ).addTo(marker_cluster_daf84d237a5941d99fe8cd523395af74);
+        
+    
+        var popup_4893cfdfe4ad4eff8907650e886a1333 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_dda53a2c6a4044f9b1e9570425b05fe6 = $(`<div id="html_dda53a2c6a4044f9b1e9570425b05fe6" style="width: 100.0%; height: 100.0%;">라인형흡연구역</div>`)[0];
+            popup_4893cfdfe4ad4eff8907650e886a1333.setContent(html_dda53a2c6a4044f9b1e9570425b05fe6);
+        
+
+        marker_cd764fc65f5d414896aa18d6302e255c.bindPopup(popup_4893cfdfe4ad4eff8907650e886a1333)
+        ;
+
+        
+    
+    
+            var marker_b2d4d795813d4adea2132a0b06a5390a = L.marker(
+                [37.4675764, 127.04488],
+                {}
+            ).addTo(marker_cluster_daf84d237a5941d99fe8cd523395af74);
+        
+    
+        var popup_5cf9dd034fd24f39a47af8a4b273bfe6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0cfce1e3cd1349c1bcea0dce80bfb589 = $(`<div id="html_0cfce1e3cd1349c1bcea0dce80bfb589" style="width: 100.0%; height: 100.0%;">라인형흡연구역</div>`)[0];
+            popup_5cf9dd034fd24f39a47af8a4b273bfe6.setContent(html_0cfce1e3cd1349c1bcea0dce80bfb589);
+        
+
+        marker_b2d4d795813d4adea2132a0b06a5390a.bindPopup(popup_5cf9dd034fd24f39a47af8a4b273bfe6)
+        ;
+
+        
+    
+    
+            var marker_6328d48e7e6a436cb61b0530d918bffe = L.marker(
+                [37.4668027, 127.0424684],
+                {}
+            ).addTo(marker_cluster_daf84d237a5941d99fe8cd523395af74);
+        
+    
+        var popup_d7021365bf0940ef869cf33cae307bfa = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e8eaa1da27bd429e8913b511d5245232 = $(`<div id="html_e8eaa1da27bd429e8913b511d5245232" style="width: 100.0%; height: 100.0%;">라인형흡연구역</div>`)[0];
+            popup_d7021365bf0940ef869cf33cae307bfa.setContent(html_e8eaa1da27bd429e8913b511d5245232);
+        
+
+        marker_6328d48e7e6a436cb61b0530d918bffe.bindPopup(popup_d7021365bf0940ef869cf33cae307bfa)
+        ;
+
+        
+    
+    
+            var marker_78e5114519bc4d64b2a5f3f3e722ec80 = L.marker(
+                [37.4713061, 127.0478523],
+                {}
+            ).addTo(marker_cluster_daf84d237a5941d99fe8cd523395af74);
+        
+    
+        var popup_848bcb63bfb44ba5ababd66bec401da5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5b20204b21d349ac994fe6448d0b76c7 = $(`<div id="html_5b20204b21d349ac994fe6448d0b76c7" style="width: 100.0%; height: 100.0%;">라인형흡연구역</div>`)[0];
+            popup_848bcb63bfb44ba5ababd66bec401da5.setContent(html_5b20204b21d349ac994fe6448d0b76c7);
+        
+
+        marker_78e5114519bc4d64b2a5f3f3e722ec80.bindPopup(popup_848bcb63bfb44ba5ababd66bec401da5)
+        ;
+
+        
+    
+    
+            var marker_ce130f0f60e24fbf9ef26955021e2701 = L.marker(
+                [37.467798, 127.0413072],
+                {}
+            ).addTo(marker_cluster_daf84d237a5941d99fe8cd523395af74);
+        
+    
+        var popup_35422085d39c4fd8a7b2b830973aa100 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_205e650d2e0a4fd5867a56a2b8f07c5d = $(`<div id="html_205e650d2e0a4fd5867a56a2b8f07c5d" style="width: 100.0%; height: 100.0%;">라인형흡연구역</div>`)[0];
+            popup_35422085d39c4fd8a7b2b830973aa100.setContent(html_205e650d2e0a4fd5867a56a2b8f07c5d);
+        
+
+        marker_ce130f0f60e24fbf9ef26955021e2701.bindPopup(popup_35422085d39c4fd8a7b2b830973aa100)
+        ;
+
+        
+    
+    
+            var marker_43afe3656ea54457a7319d4745b55a9d = L.marker(
+                [37.468558, 127.0404711],
+                {}
+            ).addTo(marker_cluster_daf84d237a5941d99fe8cd523395af74);
+        
+    
+        var popup_1891e5cd80f94224bfb1e89215a3acab = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f5ae6afd2d7b4ad9abeb9e18c1d0b155 = $(`<div id="html_f5ae6afd2d7b4ad9abeb9e18c1d0b155" style="width: 100.0%; height: 100.0%;">라인형흡연구역</div>`)[0];
+            popup_1891e5cd80f94224bfb1e89215a3acab.setContent(html_f5ae6afd2d7b4ad9abeb9e18c1d0b155);
+        
+
+        marker_43afe3656ea54457a7319d4745b55a9d.bindPopup(popup_1891e5cd80f94224bfb1e89215a3acab)
+        ;
+
+        
+    
+    
+            var marker_8cf21cfa2b1b400683e1b192845e337f = L.marker(
+                [37.4724685, 127.03913],
+                {}
+            ).addTo(marker_cluster_daf84d237a5941d99fe8cd523395af74);
+        
+    
+        var popup_08d9cb7014eb4cb1aea0f7d6901c9395 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5fa8443cf4154603b15bb9fa675ebb16 = $(`<div id="html_5fa8443cf4154603b15bb9fa675ebb16" style="width: 100.0%; height: 100.0%;">라인형흡연구역</div>`)[0];
+            popup_08d9cb7014eb4cb1aea0f7d6901c9395.setContent(html_5fa8443cf4154603b15bb9fa675ebb16);
+        
+
+        marker_8cf21cfa2b1b400683e1b192845e337f.bindPopup(popup_08d9cb7014eb4cb1aea0f7d6901c9395)
+        ;
+
+        
+    
+    
+            var marker_734452f0440e409b98bb7194b4e4c344 = L.marker(
+                [37.4605007, 127.0352614],
+                {}
+            ).addTo(marker_cluster_daf84d237a5941d99fe8cd523395af74);
+        
+    
+        var popup_8ded78da9b32401dbb5eb7e0d02f9096 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ddbe4f2d176d43f689812102b949ba6c = $(`<div id="html_ddbe4f2d176d43f689812102b949ba6c" style="width: 100.0%; height: 100.0%;">라인형흡연구역</div>`)[0];
+            popup_8ded78da9b32401dbb5eb7e0d02f9096.setContent(html_ddbe4f2d176d43f689812102b949ba6c);
+        
+
+        marker_734452f0440e409b98bb7194b4e4c344.bindPopup(popup_8ded78da9b32401dbb5eb7e0d02f9096)
+        ;
+
+        
+    
+    
+            var marker_5250a30c4aa44ef28467847c7d3830f7 = L.marker(
+                [37.4792167, 127.0412308],
+                {}
+            ).addTo(marker_cluster_daf84d237a5941d99fe8cd523395af74);
+        
+    
+        var popup_06a2d169fe6e4846b5d31eb5eaae217e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5acb9c847de9416e95f5c46c482ac74e = $(`<div id="html_5acb9c847de9416e95f5c46c482ac74e" style="width: 100.0%; height: 100.0%;">라인형흡연구역</div>`)[0];
+            popup_06a2d169fe6e4846b5d31eb5eaae217e.setContent(html_5acb9c847de9416e95f5c46c482ac74e);
+        
+
+        marker_5250a30c4aa44ef28467847c7d3830f7.bindPopup(popup_06a2d169fe6e4846b5d31eb5eaae217e)
+        ;
+
+        
+    
+    
+            var marker_75c9f6cb8bba4bdea2a998c17a01d7f3 = L.marker(
+                [37.476245, 127.0456063],
+                {}
+            ).addTo(marker_cluster_daf84d237a5941d99fe8cd523395af74);
+        
+    
+        var popup_9aea2deb482447eb9bce5972970bd621 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3d5beff2f036406080e77b7143f40dc1 = $(`<div id="html_3d5beff2f036406080e77b7143f40dc1" style="width: 100.0%; height: 100.0%;">비대면흡연부스</div>`)[0];
+            popup_9aea2deb482447eb9bce5972970bd621.setContent(html_3d5beff2f036406080e77b7143f40dc1);
+        
+
+        marker_75c9f6cb8bba4bdea2a998c17a01d7f3.bindPopup(popup_9aea2deb482447eb9bce5972970bd621)
+        ;
+
+        
+    
+    
+            var marker_37859d663bd84d169e1966c7e6bdd8e7 = L.marker(
+                [37.4687372, 127.0426789],
+                {}
+            ).addTo(marker_cluster_daf84d237a5941d99fe8cd523395af74);
+        
+    
+        var popup_4a15a37ff6b44a26b83fd7f7802db402 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3f350ff15b134a169eac53c24123720e = $(`<div id="html_3f350ff15b134a169eac53c24123720e" style="width: 100.0%; height: 100.0%;">라인형흡연구역</div>`)[0];
+            popup_4a15a37ff6b44a26b83fd7f7802db402.setContent(html_3f350ff15b134a169eac53c24123720e);
+        
+
+        marker_37859d663bd84d169e1966c7e6bdd8e7.bindPopup(popup_4a15a37ff6b44a26b83fd7f7802db402)
+        ;
+
+        
+    
+    
+            var marker_a14e3196c9ae4adbab4fd1214cd13315 = L.marker(
+                [37.4706784, 127.0392807],
+                {}
+            ).addTo(marker_cluster_daf84d237a5941d99fe8cd523395af74);
+        
+    
+        var popup_571c3db1dbaa49438b21d56ee3cfd575 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b6cae4a5b3a74a44a9fea32fd4ecc3b3 = $(`<div id="html_b6cae4a5b3a74a44a9fea32fd4ecc3b3" style="width: 100.0%; height: 100.0%;">비대면흡연부스</div>`)[0];
+            popup_571c3db1dbaa49438b21d56ee3cfd575.setContent(html_b6cae4a5b3a74a44a9fea32fd4ecc3b3);
+        
+
+        marker_a14e3196c9ae4adbab4fd1214cd13315.bindPopup(popup_571c3db1dbaa49438b21d56ee3cfd575)
+        ;
+
+        
+    
+    
+            var marker_36c1abde1ec644528d990b16156d0b10 = L.marker(
+                [37.466168, 127.0402043],
+                {}
+            ).addTo(marker_cluster_daf84d237a5941d99fe8cd523395af74);
+        
+    
+        var popup_800e8ac800e2478089247a9d8a0482b7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f2cd44ffd9de4b70b4a59be4df551c71 = $(`<div id="html_f2cd44ffd9de4b70b4a59be4df551c71" style="width: 100.0%; height: 100.0%;">비대면흡연부스</div>`)[0];
+            popup_800e8ac800e2478089247a9d8a0482b7.setContent(html_f2cd44ffd9de4b70b4a59be4df551c71);
+        
+
+        marker_36c1abde1ec644528d990b16156d0b10.bindPopup(popup_800e8ac800e2478089247a9d8a0482b7)
+        ;
+
+        
+    
+    
+            var marker_badb8b0c2aa54a05986e07169b4e3d94 = L.marker(
+                [37.4663329, 127.0358907],
+                {}
+            ).addTo(marker_cluster_daf84d237a5941d99fe8cd523395af74);
+        
+    
+        var popup_a4f785ee00b44baf9cb3bdfe09cdcd81 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_83b29fdb2bc3460aa528dd9d8aee7634 = $(`<div id="html_83b29fdb2bc3460aa528dd9d8aee7634" style="width: 100.0%; height: 100.0%;">비대면흡연부스</div>`)[0];
+            popup_a4f785ee00b44baf9cb3bdfe09cdcd81.setContent(html_83b29fdb2bc3460aa528dd9d8aee7634);
+        
+
+        marker_badb8b0c2aa54a05986e07169b4e3d94.bindPopup(popup_a4f785ee00b44baf9cb3bdfe09cdcd81)
+        ;
+
+        
+    
+</script>
